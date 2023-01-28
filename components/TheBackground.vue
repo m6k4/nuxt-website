@@ -1,10 +1,10 @@
 <template>
   <div class="TheBackground">
-    <img
+    <!-- <img
       class="TheBackground__img"
       :src="image"
       alt="bedroom"
-    >
+    > -->
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .TheBackground {
+  background-color: #212121;
   position: fixed;
   top: 0;
   left: 0;
