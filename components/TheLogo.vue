@@ -18,7 +18,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .TheLogo {
-    width: 8rem;
+    width: 20%;
     height: auto;
   }
 </style>

@@ -1,15 +1,17 @@
 <template>
     <div class="MainPage">
-        <div class="MainPage__content">
-            <p>space.</p>
-            <p>light.</p>
-            <p>proportion.</p>
-        </div>
-        <img
-        class="MainPage__image"
+      <img
         :src="image"
         alt="living_room"
         >
+      <div class="MainPage__title">
+        <p>przestrzen.</p>
+        <p>swiatlo.</p>
+        <p>proporcja.</p>
+      </div>
+      <div class="MainPage__content">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+      </div>
     </div>
 </template>
 <script>
@@ -24,21 +26,39 @@ export default {
 </script>
 <style lang="css" scoped>
 .MainPage {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.MainPage img {
+  height: 90%;
+  display: block;
+  margin: 2rem auto 0 auto;
+}
+.MainPage__title {
+  font-family: 'Playfair Display', serif;
+  color: black;
+  position: absolute;
+  top: 2rem;
+  left: 8rem;
+  text-transform: uppercase;
+  font-size: 4.5vw;
+  line-height: 1rem
 }
 .MainPage__content {
-    color: #fefefe;
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 500;
-    letter-spacing: -3px;
-    line-height: 0;
-    font-family: 'Abel', sans-serif;
-    align-content: start;
+  position: absolute;
+  bottom: 15rem;
+  font-size: 0.8rem;
+  width: 40%;
+  right: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
-.MainPage__image {
-    width: 30rem;
+@media only screen and (max-width: 1600px) {
+  .MainPage__content {
+    font-size: 0.6rem;
+  }
 }
 </style>

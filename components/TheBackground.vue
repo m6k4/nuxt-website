@@ -20,7 +20,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .TheBackground {
-  background-color: #212121;
+  background-color: #F0F0F0;
   position: fixed;
   top: 0;
   left: 0;
