@@ -5,7 +5,7 @@
         <TheLogo/>
       </div>
       <div class="TheNavbar__navbar-buttons">
-        <NuxtLink to="/contact">
+        <NuxtLink to="/portfolio">
           Portfolio
         </NuxtLink>
         <NuxtLink to="/contact">
@@ -51,6 +51,8 @@ export default {
   display: flex;
   color: black;
   position: relative;
+  height: 10vh;
+  padding: 0 10%;
 }
 .TheNavbar__navbar-buttons a {
   color: black;

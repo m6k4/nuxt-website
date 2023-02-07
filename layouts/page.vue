@@ -2,25 +2,24 @@
   <div class="ThePage">
     <TheNavbar class="TheNavbar"/>
     <Nuxt />
-    <MainPage class="MainPage"/>
     <TheFooter class="TheFooter"/>
   </div>
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
-import MainPage from '~/components/MainPage.vue'
 
 export default {
   name: 'ThePage',
   components: {
-    TheNavbar, TheFooter, MainPage
+    TheNavbar, TheFooter
   }
 }
 </script>
 <style lang="css" scoped>
 .ThePage {
   position: relative;
+  overflow-x: hidden;
 }
 .TheFooter {
   position: sticky;

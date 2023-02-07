@@ -26,16 +26,17 @@ export default {
 </script>
 <style lang="css" scoped>
 .MainPage {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-y: hidden;
 }
 .MainPage img {
-  height: 90%;
+  height: 100%;
   display: block;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto
 }
 .MainPage__title {
   font-family: 'Playfair Display', serif;
