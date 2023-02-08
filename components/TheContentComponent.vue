@@ -26,12 +26,15 @@ export default {
 }
 .TheContentComponent__image{
   height: 100%;
+  margin-left: 5rem;
+  width: 42rem;
+  object-fit: cover;
 }
 .TheContentComponent__title{
   font-family: 'Playfair Display', serif;
   color: black;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 45%;
   text-transform: uppercase;
   font-size: 4.5vw;
@@ -42,7 +45,7 @@ export default {
   position: absolute;
   bottom: 20%;
   font-size: 0.8rem;
-  width: 40%;
+  width: 35%;
   right: 10%;
   font-weight: 500;
   text-transform: uppercase;
@@ -50,6 +53,11 @@ export default {
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
     font-size: 0.6rem;
+    width: 33%;
+    bottom: 10%;
+  }
+  .TheContentComponent__image {
+    width: 35rem;
   }
 }
 </style>

@@ -20,9 +20,7 @@ export default {
 .ThePage {
   position: relative;
   overflow-x: hidden;
-}
-.TheFooter {
-  position: sticky;
-  bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F0F0F0;
 }
 </style>

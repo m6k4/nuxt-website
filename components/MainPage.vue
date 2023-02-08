@@ -59,7 +59,7 @@ export default {
 }
 @media only screen and (max-width: 1600px) {
   .MainPage__content {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 </style>

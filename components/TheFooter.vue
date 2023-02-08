@@ -24,6 +24,8 @@ export default {
     justify-content: space-between;
     line-height: 1.5rem;
     padding: 0 10%;
+    position: sticky;
+    bottom: 0;
   }
 .TheFooter__name {
   text-transform: uppercase;

@@ -8,10 +8,10 @@
         <NuxtLink to="/portfolio">
           Portfolio
         </NuxtLink>
-        <NuxtLink to="/contact">
+        <NuxtLink to="/navy">
           Navy
         </NuxtLink>
-        <NuxtLink to="/services">
+        <NuxtLink to="/offer">
           Oferta
         </NuxtLink>
         <NuxtLink to="/contact">
