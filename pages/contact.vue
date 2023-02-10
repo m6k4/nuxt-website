@@ -1,16 +1,22 @@
 <template>
   <div class="contact">
-    <TheContentComponent :title="title" :content="content" :mainImage="image"/>
+    <TheContentComponent :title="title" :content="content" :main-image="image" />
+    <div class="contact__form">
+      <ContactForm class="form-box" />
+    </div>
   </div>
 </template>
 <script>
 import TheContentComponent from '~/components/TheContentComponent'
+import ContactForm from '~/components/ContactForm'
+
 export default {
   name: 'ContactPage',
-  layout: 'page',
   components: {
-    TheContentComponent
+    TheContentComponent,
+    ContactForm
   },
+  layout: 'page',
   data () {
     return {
       image: 'images/contact_image.jpg',
@@ -21,3 +27,16 @@ export default {
 
 }
 </script>
+<style lang="css" scoped>
+.contact__form {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 600px;
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
   <div class="TheNavbar">
-    <navbar class="TheNavbar__navbar">
+    <div class="TheNavbar__navbar">
       <div class="TheNavbar__logo">
-        <TheLogo/>
+        <TheLogo />
       </div>
       <div class="TheNavbar__navbar-buttons">
         <NuxtLink to="/portfolio">
@@ -23,10 +23,10 @@
           <img :src="facebook">
         </a>
         <a href="#" class="instagram">
-          <img :src="instagram"/>
+          <img :src="instagram">
         </a>
       </div>
-    </navbar>
+    </div>
   </div>
 </template>
 
