@@ -4,19 +4,18 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
-      <div>{{ activeTab }} here</div>
       <div class="TheNavbar__navbar-buttons">
-        <NuxtLink @click="setActiveTab" to="/portfolio" :style="{ fontWeight: activeTab === 'portfolio' ? 'bold' : 'normal' }" >
-          Portfolio
+        <NuxtLink to="/portfolio" >
+          <span @click="activeTab = 'portfolio'" :class="{ active: activeTab === 'portfolio' }">Portfolio</span>
         </NuxtLink>
-        <NuxtLink :class="{ active: activeTab === 'navy' }" @click="activeTab = 'navy'" to="/navy">
-          Navy
+        <NuxtLink to="/navy">
+          <span :class="{ active: activeTab === 'navy' }" @click="activeTab = 'navy'">Navy</span>
         </NuxtLink>
-        <NuxtLink :class="{ active: activeTab === 'offer' }" @click="activeTab = 'offer'" to="/offer">
-          Oferta
+        <NuxtLink to="/offer">
+          <span :class="{ active: activeTab === 'offer' }" @click="activeTab = 'offer'">Oferta</span>
         </NuxtLink>
-        <NuxtLink :class="{ active: activeTab === 'contact' }" @click="activeTab = 'contact'" to="/contact">
-          Kontakt
+        <NuxtLink to="/contact">
+          <span :class="{ active: activeTab === 'contact' }" @click="activeTab = 'contact'">Kontakt</span>
         </NuxtLink>
       </div>
       <div class="TheNavbar__icons">
@@ -42,13 +41,7 @@ export default {
     return {
       facebook: 'images/facebook.png',
       instagram: 'images/instagram.png',
-      activeTab: 'navy'
-    }
-  },
-  methods: {
-    setActiveTab () {
-      console.log('clicked')
-      this.activeTab = 'portfolio'
+      activeTab: ''
     }
   }
 }
@@ -108,5 +101,6 @@ export default {
 }
 .active {
   font-weight: bold;
+  cursor: default;
 }
 </style>
