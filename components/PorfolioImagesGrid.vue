@@ -2,7 +2,7 @@
   <div class="PorfolioImagesGrid">
       <div class="PorfolioImagesGrid__grid">
       <div class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image" :style="!isBiggerImageLeft && 'height: 50%;'">
-        <!-- <ImageTitle :title="'Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/> -->
+        <ImageTitle :title="'.Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
         <img
           :src="imageFirst"
           :alt="imageFirstDescription"
@@ -41,14 +41,14 @@
   </div>
 </template>
 <script>
-// import ImageTitle from '~/components/ImageTitle'
+import ImageTitle from '~/components/ImageTitle'
 export default {
   name: 'TheContentComPorfolioImagesGridponent',
   props: ['imageFirst', 'imageFirstDescription', 'imageSecond', 'imageSecondDescription', 'imageThird', 'imageThirdDescription', 'isBiggerImageLeft'],
-  layout: 'page'
-  // components: {
-  //   ImageTitle
-  // }
+  layout: 'page',
+  components: {
+    ImageTitle
+  }
 }
 </script>
 <style lang="css" scoped>
@@ -85,7 +85,8 @@ export default {
   transform: translateX(0);
 }
 /* .PorfolioImagesGrid__grid-text {
-  opacity: 0;
+  width: 100%;
+  height: 100%;
 }
 .PorfolioImagesGrid__grid:hover .PorfolioImagesGrid__grid-text {
   opacity: 1;

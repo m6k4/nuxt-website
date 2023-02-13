@@ -1,5 +1,5 @@
 <template>
-    <div class="offer">
+    <div class="Offer">
       <TheContentComponent :title="title" :content="content" :mainImage="image"/>
     </div>
   </template>
@@ -20,3 +20,8 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+.Offer{
+  overflow-y: hidden;
+}
+</style>

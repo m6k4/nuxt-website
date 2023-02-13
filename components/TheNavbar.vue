@@ -4,17 +4,18 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
+      <div>{{ activeTab }} here</div>
       <div class="TheNavbar__navbar-buttons">
-        <NuxtLink to="/portfolio">
+        <NuxtLink @click="setActiveTab" to="/portfolio" :style="{ fontWeight: activeTab === 'portfolio' ? 'bold' : 'normal' }" >
           Portfolio
         </NuxtLink>
-        <NuxtLink to="/navy">
+        <NuxtLink :class="{ active: activeTab === 'navy' }" @click="activeTab = 'navy'" to="/navy">
           Navy
         </NuxtLink>
-        <NuxtLink to="/offer">
+        <NuxtLink :class="{ active: activeTab === 'offer' }" @click="activeTab = 'offer'" to="/offer">
           Oferta
         </NuxtLink>
-        <NuxtLink to="/contact">
+        <NuxtLink :class="{ active: activeTab === 'contact' }" @click="activeTab = 'contact'" to="/contact">
           Kontakt
         </NuxtLink>
       </div>
@@ -40,7 +41,14 @@ export default {
   data () {
     return {
       facebook: 'images/facebook.png',
-      instagram: 'images/instagram.png'
+      instagram: 'images/instagram.png',
+      activeTab: 'navy'
+    }
+  },
+  methods: {
+    setActiveTab () {
+      console.log('clicked')
+      this.activeTab = 'portfolio'
     }
   }
 }
@@ -83,7 +91,6 @@ export default {
   font-size: 0.8rem;
   width: 100%;
   justify-content: space-between;
-  font-weight: 400;
 }
 .TheNavbar__navbar-buttons {
   display: flex;
@@ -98,5 +105,8 @@ export default {
 }
 .TheNavbar__icons img {
   height: 1.2rem
+}
+.active {
+  font-weight: bold;
 }
 </style>

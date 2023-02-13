@@ -17,11 +17,14 @@ export default {
     position: absolute;
     z-index: 1;
     text-align: center;
+    opacity: 0;
   }
   .ImageTitle__title {
     color: white;
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 0;
+    line-height: 2rem;
   }
   .ImageTitle__content {
 
