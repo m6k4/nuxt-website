@@ -12,6 +12,7 @@
       <div v-if="!isBiggerImageLeft"
       class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
        style="height: 50%;">
+       <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
         <img
           :src="imageSecond"
           :alt="imageSecondDescription"
@@ -23,6 +24,7 @@
       <div v-if="isBiggerImageLeft"
        class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
        style="height: 50%;">
+       <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
         <img
           :src="imageSecond"
           :alt="imageSecondDescription"
@@ -31,6 +33,7 @@
       </div>
       <div class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
        :style="isBiggerImageLeft && 'height: 50%;'">
+       <ImageTitle :title="'.Nazwa 3'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
         <img
           :src="imageThird"
           :alt="imageThirdDescription"
@@ -69,7 +72,9 @@ export default {
 }
 .PorfolioImagesGrid__image {
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 .PorfolioImagesGrid__image img{
   height: 101%;
@@ -81,16 +86,6 @@ export default {
 .PorfolioImagesGrid__grid-item-1 img {
   transform: translateX(-5%);
 }
-.PorfolioImagesGrid__grid-item-1 img:hover {
-  transform: translateX(0);
-}
-/* .PorfolioImagesGrid__grid-text {
-  width: 100%;
-  height: 100%;
-}
-.PorfolioImagesGrid__grid:hover .PorfolioImagesGrid__grid-text {
-  opacity: 1;
-} */
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 img {
   transform: translateX(0);
 }
@@ -99,5 +94,27 @@ export default {
 }
 .PorfolioImagesGrid__grid-item-2 img:hover {
   transform: translateX(-5%);
+}
+.PorfolioImagesGrid__grid-item-1 img:hover {
+  transform: translateX(0);
+}
+.PorfolioImagesGrid__grid-text {
+  left: 0;
+  right: 0;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.PorfolioImagesGrid__grid-item-1:hover .PorfolioImagesGrid__grid-text {
+  opacity: 1;
+}
+.PorfolioImagesGrid__grid-item-2:hover .PorfolioImagesGrid__grid-text {
+  opacity: 1;
+}
+.PorfolioImagesGrid__grid-item-3:hover .PorfolioImagesGrid__grid-text {
+  opacity: 1;
 }
 </style>

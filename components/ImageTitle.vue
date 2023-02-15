@@ -21,12 +21,12 @@ export default {
   }
   .ImageTitle__title {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 0;
+    margin: 0 auto;
     line-height: 2rem;
   }
   .ImageTitle__content {
-
+    font-size: 0.9rem;
   }
   </style>
