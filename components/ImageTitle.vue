@@ -29,4 +29,21 @@ export default {
   .ImageTitle__content {
     font-size: 0.9rem;
   }
+  @media only screen and (max-width: 1000px) {
+  .ImageTitle__title{
+    font-size: 2.1rem
+  }
+  .ImageTitle__content{
+    font-size: 0.8rem
+  }
+}
+  @media only screen and (max-width: 750px) {
+    .ImageTitle__title{
+    font-size: 1.8rem
+  }
+  .ImageTitle__content{
+    font-size: 0.7rem
+  }
+}
+
   </style>

@@ -117,4 +117,36 @@ export default {
 .PorfolioImagesGrid__grid-item-3:hover .PorfolioImagesGrid__grid-text {
   opacity: 1;
 }
+@media only screen and (max-width: 1280px) {
+  .PorfolioImagesGrid__grid{
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .PorfolioImagesGrid__grid{
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .PorfolioImagesGrid__grid{
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .PorfolioImagesGrid{
+    flex-direction: column;
+  }
+  .PorfolioImagesGrid__grid {
+    width: 100%
+  }
+  .PorfolioImagesGrid__grid-text {
+    opacity: 1;
+  }
+  .PorfolioImagesGrid__image {
+    height: 50%;
+  }
+  .PorfolioImagesGrid__grid{
+    height: auto;
+  }
+}
 </style>
