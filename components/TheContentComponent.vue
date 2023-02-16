@@ -1,4 +1,5 @@
 <template>
+  <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
         <img
         :src="mainImage"
@@ -10,6 +11,10 @@
         {{ content }}
       </div>
     </div>
+    <div class="TheContentComponent__content-mobile">
+        {{ content }}
+      </div>
+  </div>
   </template>
 <script>
 export default {
@@ -37,7 +42,7 @@ export default {
   top: 10%;
   left: 45%;
   text-transform: uppercase;
-  font-size: 4.5vw;
+  font-size: 5rem;
   line-height: 1rem;
   font-weight: 400;
 }
@@ -50,6 +55,9 @@ export default {
   font-weight: 500;
   text-transform: uppercase;
 }
+.TheContentComponent__content-mobile {
+  display: none;
+}
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
     font-size: 0.6rem;
@@ -58,6 +66,88 @@ export default {
   }
   .TheContentComponent__image {
     width: 35rem;
+  }
+  .TheContentComponent__title {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .TheContentComponent__image {
+    margin-left: 1rem;
+  }
+  .TheContentComponent__title {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .TheContentComponent {
+    background-color: #D7CAC2;
+    padding: 0;
+    margin-top: 5%
+  }
+  .TheContentComponent__image {
+    width: 100%;
+    margin-left: 0;
+    height: 95%;
+    margin-top: 5%;
+  }
+  .TheContentComponent__wrapper {
+    padding: 0 10%;
+  }
+  .TheContentComponent__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: auto;
+    top: -3rem;
+    font-size: 3.5rem;
+  }
+  .TheContentComponent__content {
+    display: none;
+  }
+  .TheContentComponent__content-mobile {
+    display: block;
+    font-size: 0.8rem;
+    margin: 4rem 0 5rem 0
+  }
+}
+@media only screen and (max-width: 750px) {
+  .TheContentComponent__wrapper {
+    padding: 0;
+  }
+  .TheContentComponent__title {
+    font-size: 3rem;
+  }
+  .TheContentComponent__content-mobile {
+    padding: 0 5%;
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .TheContentComponent__wrapper {
+    padding: 0;
+  }
+  .TheContentComponent__title {
+    font-size: 2.5rem;
+    top: -2.5rem;
+  }
+  .TheContentComponent__image {
+    margin-top: 6%;
+    height: 96%;
+  }
+  .TheContentComponent__content-mobile {
+    font-size: 0.7rem;
+  }
+
+}
+@media only screen and (max-width: 440px) {
+  .TheContentComponent__title {
+    font-size: 2rem;
+    top: -2rem;
+  }
+  .TheContentComponent__image {
+    margin-top: 6%;
+    height: 98%;
   }
 }
 </style>
