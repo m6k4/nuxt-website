@@ -1,20 +1,30 @@
 <template>
   <div class="contact">
-    <TheContentComponent :title="title" :content="content" :main-image="image" />
-    <div class="contact__form">
-      <ContactForm class="form-box" />
-    </div>
+    <TheContentComponent :title="title" :main-image="image">
+      <template #custom-content>
+        <ContactInfo />
+      </template>
+    </TheContentComponent>
+    <ContactForm />
+    <AddressInfo />
+    <GoogleMap />
   </div>
 </template>
 <script>
 import TheContentComponent from '~/components/TheContentComponent'
-import ContactForm from '~/components/ContactForm'
+import ContactForm from '~/components/contact/ContactForm'
+import GoogleMap from '~/components/contact/GoogleMap'
+import ContactInfo from '~/components/contact/ContactInfo'
+import AddressInfo from '~/components/contact/AddressInfo'
 
 export default {
   name: 'ContactPage',
   components: {
     TheContentComponent,
-    ContactForm
+    ContactForm,
+    GoogleMap,
+    ContactInfo,
+    AddressInfo
   },
   layout: 'page',
   data () {
@@ -28,15 +38,5 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-.contact__form {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.form-box {
-  width: 600px;
-}
 </style>
