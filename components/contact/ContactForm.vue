@@ -1,5 +1,13 @@
 <template>
   <div class="ContactForm">
+    <div class="ContactForm__title">
+      <div class="main-title">
+        Skontaktuj się ze mną
+      </div>
+      <div class="subtitle">
+        Napisz do mnie wiadomość
+      </div>
+    </div>
     <form class="ContactForm__form" @submit.prevent="submitForm">
       <label class="ContactForm__form-label">
         <span class="label-title">Adres email</span>
@@ -55,17 +63,50 @@ export default {
 .ContactForm {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding: 10rem 0 2rem;
 }
 
-.ContactForm__form {
-  width: 100%;
+@media only screen and (max-width: 1150px) {
+  .ContactForm {
+    padding: 0 0 2rem;;
+  }
+}
+
+.ContactForm__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.ContactForm__title .main-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.ContactForm__title .subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.ContactForm__form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .ContactForm__form {
+    width: 80%;
+    padding: 0 10rem;
+  }
 }
 
 .ContactForm__form-label {
@@ -83,15 +124,19 @@ export default {
 .ContactForm__form-label textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
   outline: none;
   resize: none;
+  border-width: 0 0 2px;
+  outline: 0;
+  border-color: #ccc;
+  background-color: transparent;
 }
 
 .ContactForm__form-label textarea {
-  height: 10rem;
+  height: 1rem;
 }
 
 .ContactForm__form button {

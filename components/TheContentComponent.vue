@@ -1,26 +1,30 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-        <img
+      <img
         :src="mainImage"
         alt="kids_room"
         class="TheContentComponent__image"
-        >
-      <h1 class="TheContentComponent__title">{{ title }}</h1>
+      >
+      <h1 class="TheContentComponent__title">
+        {{ title }}
+      </h1>
       <div class="TheContentComponent__content">
         {{ content }}
+        <slot name="custom-content" />
       </div>
     </div>
     <div class="TheContentComponent__content-mobile">
-        {{ content }}
-      </div>
+      {{ content }}
+      <slot name="custom-content" />
+    </div>
   </div>
-  </template>
+</template>
 <script>
 export default {
   name: 'TheContentComponent',
-  props: ['title', 'content', 'mainImage'],
-  layout: 'page'
+  layout: 'page',
+  props: ['title', 'content', 'mainImage']
 }
 </script>
 <style lang="css" scoped>
@@ -47,6 +51,15 @@ export default {
   font-weight: 400;
 }
 .TheContentComponent__content {
+  position: absolute;
+  bottom: 20%;
+  font-size: 0.8rem;
+  width: 35%;
+  right: 10%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.TheContentComponent__custom-content {
   position: absolute;
   bottom: 20%;
   font-size: 0.8rem;
