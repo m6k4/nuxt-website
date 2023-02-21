@@ -1,18 +1,20 @@
 <template>
   <div class="PorfolioImagesGrid">
-      <div class="PorfolioImagesGrid__grid">
+    <div class="PorfolioImagesGrid__grid">
       <div class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image" :style="!isBiggerImageLeft && 'height: 50%;'">
-        <ImageTitle :title="'.Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
+        <ImageTitle :title="'.Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
         <img
           :src="imageFirst"
           :alt="imageFirstDescription"
           class="PorfolioImagesGrid__image"
         >
       </div>
-      <div v-if="!isBiggerImageLeft"
-      class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
-       style="height: 50%;">
-       <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
+      <div
+        v-if="!isBiggerImageLeft"
+        class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
+        style="height: 50%;"
+      >
+        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
         <img
           :src="imageSecond"
           :alt="imageSecondDescription"
@@ -21,37 +23,41 @@
       </div>
     </div>
     <div class="PorfolioImagesGrid__grid">
-      <div v-if="isBiggerImageLeft"
-       class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
-       style="height: 50%;">
-       <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
+      <div
+        v-if="isBiggerImageLeft"
+        class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
+        style="height: 50%;"
+      >
+        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
         <img
           :src="imageSecond"
           :alt="imageSecondDescription"
           class="PorfolioImagesGrid__image"
         >
       </div>
-      <div class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
-       :style="isBiggerImageLeft && 'height: 50%;'">
-       <ImageTitle :title="'.Nazwa 3'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text"/>
+      <div
+        class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
+        :style="isBiggerImageLeft && 'height: 50%;'"
+      >
+        <ImageTitle :title="'.Nazwa 3'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
         <img
           :src="imageThird"
           :alt="imageThirdDescription"
           class="PorfolioImagesGrid__image"
         >
+      </div>
     </div>
-  </div>
   </div>
 </template>
 <script>
 import ImageTitle from '~/components/ImageTitle'
 export default {
   name: 'TheContentComPorfolioImagesGridponent',
-  props: ['imageFirst', 'imageFirstDescription', 'imageSecond', 'imageSecondDescription', 'imageThird', 'imageThirdDescription', 'isBiggerImageLeft'],
-  layout: 'page',
   components: {
     ImageTitle
-  }
+  },
+  layout: 'page',
+  props: ['imageFirst', 'imageFirstDescription', 'imageSecond', 'imageSecondDescription', 'imageThird', 'imageThirdDescription', 'isBiggerImageLeft']
 }
 </script>
 <style lang="css" scoped>
