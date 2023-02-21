@@ -62,4 +62,10 @@ export default {
     font-size: 0.7rem;
   }
 }
+@media only screen and (max-width: 750px) {
+  .MainPage__title {
+    font-size: 2rem;
+    left: 2rem;
+  }
+}
 </style>

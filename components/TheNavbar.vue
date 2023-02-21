@@ -27,6 +27,40 @@
         </a>
       </div>
     </div>
+    <div class="TheNavbar__mobile">
+      <div class="TheNavbar__logo">
+        <TheLogo />
+      </div>
+        <div style="position: relative; z-index: 3;" @click="showMore=!showMore" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'">
+          <div class="TheNavbar__menu-burger">
+
+          </div>
+        </div>
+    </div>
+    <div class="TheNavbar__mobile-content" :style="showMore ? 'height: 100vh' : 'height: 0'">
+        <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
+        <NuxtLink to="/portfolio" >
+          <span @click="changeTab('portfolio')" :class="{ active: activeTab === 'portfolio' }">Portfolio</span>
+        </NuxtLink>
+        <NuxtLink to="/navy">
+          <span :class="{ active: activeTab === 'navy' }" @click="changeTab('navy')">Navy</span>
+        </NuxtLink>
+        <NuxtLink to="/offer">
+          <span :class="{ active: activeTab === 'offer' }" @click="changeTab('offer')">Oferta</span>
+        </NuxtLink>
+        <NuxtLink to="/contact">
+          <span :class="{ active: activeTab === 'contact' }" @click="changeTab('contact')">Kontakt</span>
+        </NuxtLink>
+        <div class="TheNavbar__icons">
+        <a href="#" class="facebook">
+          <img :src="facebook">
+        </a>
+        <a href="#" class="instagram">
+          <img :src="instagram">
+        </a>
+      </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,7 +75,14 @@ export default {
     return {
       facebook: 'images/facebook.png',
       instagram: 'images/instagram.png',
-      activeTab: ''
+      activeTab: '',
+      showMore: false
+    }
+  },
+  methods: {
+    changeTab (tab) {
+      this.activeTab = tab
+      this.showMore = false
     }
   }
 }
@@ -53,6 +94,8 @@ export default {
   color: black;
   position: relative;
   height: 10vh;
+}
+.TheNavbar__navbar {
   padding: 0 10%;
 }
 .TheNavbar__navbar-buttons a {
@@ -103,5 +146,110 @@ export default {
 .active {
   font-weight: bold;
   cursor: default;
+}
+.TheNavbar__mobile {
+  display: none;
+}
+.TheNavbar__mobile-content {
+  display: none;
+}
+@media only screen and (max-width: 1150px) {
+  .TheNavbar__mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3%
+  }
+  .TheNavbar__navbar {
+    display: none;
+  }
+  .TheNavbar__mobile-content {
+    background-color: #212121;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    transition: all 0.3s ease-out;
+  }
+  .TheNavbar__mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    padding: 0 3rem;
+    transition: all 0.3s ease-out;
+  }
+  .TheNavbar__mobile-buttons a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: left;
+    display: block;
+    margin: 0 auto 0 0
+  }
+  .TheNavbar__menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin: 1rem;
+  }
+  .TheNavbar__menu-burger {
+    width: 20px;
+    height: 2px;
+    background: black;
+    transition: all .5s ease-in-out;;
+  }
+  .TheNavbar__menu-burger::before,
+  .TheNavbar__menu-burger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: black;
+    transition: all .5s ease-in-out;;
+  }
+  .TheNavbar__menu-burger::before {
+    transform: translateY(-5px);
+  }
+  .TheNavbar__menu-burger::after {
+    transform: translateY(5px);
+  }
+  .TheNavbar__menu.open .TheNavbar__menu-burger {
+    transform: translateX(-20px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .TheNavbar__menu.open .TheNavbar__menu-burger::before {
+    transform: rotate(45deg) translate(14px, -14px);
+    background-color: white;
+  }
+  .TheNavbar__menu.open .TheNavbar__menu-burger::after {
+    transform: rotate(-45deg) translate(14px, 14px);
+    background-color: white;
+  }
+  .TheNavbar__icons {
+    filter: invert(1);
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    gap: 0.5rem;
+  }
+  .TheNavbar__icons img {
+    height: 1.5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .TheNavbar__mobile-buttons a{
+    font-size: 0.9rem
+  }
 }
 </style>
