@@ -84,6 +84,7 @@ export default {
   font-size: 0.8rem;
   width: 100%;
   justify-content: space-between;
+  gap: 1rem;
 }
 .TheNavbar__navbar-buttons {
   display: flex;
