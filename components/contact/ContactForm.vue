@@ -4,9 +4,6 @@
       <div class="main-title">
         Skontaktuj się ze mną
       </div>
-      <div class="subtitle">
-        Napisz do mnie wiadomość
-      </div>
     </div>
     <form class="ContactForm__form" @submit.prevent="submitForm">
       <label class="ContactForm__form-label">
@@ -95,7 +92,7 @@ export default {
 }
 
 .ContactForm__form {
-  width: 600px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,13 +119,14 @@ export default {
 
 .ContactForm__form-label input,
 .ContactForm__form-label textarea {
-  width: 100%;
+  width: 94%;
   padding: 0.5rem;
   border-bottom: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
   outline: none;
   resize: none;
+  overflow: hidden;
   border-width: 0 0 2px;
   outline: 0;
   border-color: #ccc;
@@ -174,6 +172,16 @@ export default {
 .ContactForm__form button:disabled:hover {
   border: 1px solid #2a2a2a;
   background-color: #2a2a2a;
+}
+
+@media only screen and (max-width: 750px) {
+  .ContactForm__form {
+    padding: 0 2rem;
+  }
+
+  .ContactForm__form button {
+    width: 100%;
+  }
 }
 
 .success-message {

@@ -5,9 +5,15 @@
         <ContactInfo />
       </template>
     </TheContentComponent>
-    <ContactForm />
-    <AddressInfo />
-    <GoogleMap />
+    <div class="contact__row">
+      <div class="row-column">
+        <ContactForm />
+        <AddressInfo />
+      </div>
+      <div class="row-column">
+        <GoogleMap />
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -38,5 +44,30 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+.contact__row {
+  padding: 0 10%;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 4rem;
+}
 
+.row-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .contact__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contact__row {
+    padding: 0;
+  }
+}
 </style>
