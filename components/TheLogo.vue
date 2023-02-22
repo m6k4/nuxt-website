@@ -11,7 +11,7 @@ export default {
   name: 'TheLogo',
   data () {
     return {
-      image: 'images/logo.png'
+      image: '/images/logo.png'
     }
   }
 }

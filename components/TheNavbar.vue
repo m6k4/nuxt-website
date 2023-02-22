@@ -5,8 +5,8 @@
         <TheLogo />
       </div>
       <div class="TheNavbar__navbar-buttons">
-        <NuxtLink to="/portfolio" >
-          <span @click="activeTab = 'portfolio'" :class="{ active: activeTab === 'portfolio' }">Portfolio</span>
+        <NuxtLink to="/portfolio">
+          <span :class="{ active: activeTab === 'portfolio' }" @click="activeTab = 'portfolio'">Portfolio</span>
         </NuxtLink>
         <NuxtLink to="/navy">
           <span :class="{ active: activeTab === 'navy' }" @click="activeTab = 'navy'">Navy</span>
@@ -31,16 +31,14 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
-        <div style="position: relative; z-index: 3;" @click="showMore=!showMore" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'">
-          <div class="TheNavbar__menu-burger">
-
-          </div>
-        </div>
+      <div style="position: relative; z-index: 3;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
+        <div class="TheNavbar__menu-burger" />
+      </div>
     </div>
     <div class="TheNavbar__mobile-content" :style="showMore ? 'height: 100vh' : 'height: 0'">
-        <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
-        <NuxtLink to="/portfolio" >
-          <span @click="changeTab('portfolio')" :class="{ active: activeTab === 'portfolio' }">Portfolio</span>
+      <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
+        <NuxtLink to="/portfolio">
+          <span :class="{ active: activeTab === 'portfolio' }" @click="changeTab('portfolio')">Portfolio</span>
         </NuxtLink>
         <NuxtLink to="/navy">
           <span :class="{ active: activeTab === 'navy' }" @click="changeTab('navy')">Navy</span>
@@ -52,13 +50,13 @@
           <span :class="{ active: activeTab === 'contact' }" @click="changeTab('contact')">Kontakt</span>
         </NuxtLink>
         <div class="TheNavbar__icons">
-        <a href="#" class="facebook">
-          <img :src="facebook">
-        </a>
-        <a href="#" class="instagram">
-          <img :src="instagram">
-        </a>
-      </div>
+          <a href="#" class="facebook">
+            <img :src="facebook">
+          </a>
+          <a href="#" class="instagram">
+            <img :src="instagram">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -73,8 +71,8 @@ export default {
   },
   data () {
     return {
-      facebook: 'images/facebook.png',
-      instagram: 'images/instagram.png',
+      facebook: '/images/facebook.png',
+      instagram: '/images/instagram.png',
       activeTab: '',
       showMore: false
     }
