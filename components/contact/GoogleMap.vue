@@ -4,7 +4,7 @@
       <iframe
         id="GoogleMap__canvas"
         width="100%"
-        height="500"
+        height="100%"
         src="https://maps.google.com/maps?q=ul.%20Konstruktorska%2010C/31%2002-673%20Warszawa&t=&z=13&ie=UTF8&iwloc=&output=embed"
         frameborder="0"
         scrolling="no"
@@ -26,18 +26,18 @@ export default {
 <style lang="css" scoped>
 .GoogleMap {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
   text-transform: none;
 }
 
 .GoogleMap__canvas {
   width: 100%;
-  overflow:hidden;
-  background:none !important;
-  padding: 2rem 0;
+  height: 100%;
+  overflow: hidden;
+  background: none !important;
 }
 </style>

@@ -84,6 +84,16 @@ export default {
 .contact {
   display: flex;
   gap: 4rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .contact {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
 }
 
 .socials {

@@ -6,7 +6,7 @@
         alt="kids_room"
         class="TheContentComponent__image"
       >
-      <h1 class="TheContentComponent__title">
+      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
         {{ title }}
       </h1>
       <div class="TheContentComponent__content">
@@ -24,7 +24,27 @@
 export default {
   name: 'TheContentComponent',
   layout: 'page',
-  props: ['title', 'content', 'mainImage']
+  props: ['title', 'content', 'mainImage'],
+  data () {
+    return {
+      isScrollingOnDesktop: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
+  methods: {
+    handleScroll () {
+      if (window.innerWidth > 768) {
+        if (window.scrollY > 0) {
+          this.isScrollingOnDesktop = true
+        } else {
+          this.isScrollingOnDesktop = false
+        }
+      }
+    }
+  }
 }
 </script>
 <style lang="css" scoped>
@@ -35,8 +55,7 @@ export default {
 }
 .TheContentComponent__image{
   height: 100%;
-  margin-left: 5rem;
-  width: 42rem;
+  width: 50%;
   object-fit: cover;
 }
 .TheContentComponent__title{
@@ -49,7 +68,12 @@ export default {
   font-size: 5rem;
   line-height: 1rem;
   font-weight: 400;
+  transition: all 0.5s ease;
 }
+.TheContentComponent__title.move{
+  top: 5%;
+}
+
 .TheContentComponent__content {
   position: absolute;
   bottom: 20%;
