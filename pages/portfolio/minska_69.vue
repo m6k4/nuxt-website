@@ -2,7 +2,7 @@
   <div class="Portfolio1">
     <div class="Portfolio1__parallax" />
     <div class="Portfolio1__parallax-title">
-      <h1>Minska 69</h1>
+      <h1>Mińska 69</h1>
     </div>
     <div class="Portfolio1__content">
       <div class="Portfolio1__description">
@@ -13,7 +13,7 @@
         <img :src="sink" alt="bathroom">
       </div>
       <div class="Portfolio1__grid">
-        <img :src="sinks" alt="bathroom">
+        <img :src="tv" alt="bathroom">
         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever si</p>
       </div>
       <div class="Portfolio1__grid">
@@ -39,6 +39,7 @@ export default {
       whiteSink: '/images/portfolio/white_sink.jpg',
       kidsRoomGreen: '/images/portfolio/kidsroom2.jpg',
       circleMirror: '/images/portfolio/circle_mirror.jpg',
+      tv: '/images/portfolio/tv.jpg',
       currentHover: null
     }
   }
@@ -46,7 +47,8 @@ export default {
 </script>
 <style lang="css" scoped>
 .Portfolio1 {
-  padding: 0;
+  padding: 0 10%;
+
 }
 
 .Portfolio1__parallax {
@@ -59,10 +61,13 @@ export default {
 }
 
 .Portfolio1__parallax-title {
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 5rem;
+  line-height: 1rem;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 12%;
+  top: 14%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5rem;
