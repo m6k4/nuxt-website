@@ -3,6 +3,7 @@
       <img
         :src="image"
         alt="living_room"
+        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
         >
       <div class="MainPage__title">
         <p>przestrzen.</p>
@@ -19,7 +20,17 @@ export default {
   name: 'MainPage',
   data () {
     return {
-      image: 'images/main.jpeg'
+      image: 'images/main.jpeg',
+      isLoading: false
+    }
+  },
+  mounted () {
+    this.changeLoadingState()
+  },
+
+  methods: {
+    changeLoadingState () {
+      setTimeout(this.isLoading = true, 700)
     }
   }
 }
@@ -36,7 +47,8 @@ export default {
 .MainPage img {
   height: 100%;
   display: block;
-  margin: 0 auto
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out
 }
 .MainPage__title {
   font-family: 'Playfair Display', serif;
@@ -46,7 +58,7 @@ export default {
   left: 8rem;
   text-transform: uppercase;
   font-size: 4.5vw;
-  line-height: 1rem
+  line-height: 1rem;
 }
 .MainPage__content {
   position: absolute;
