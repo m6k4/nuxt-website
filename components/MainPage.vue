@@ -30,7 +30,7 @@ export default {
 
   methods: {
     changeLoadingState () {
-      setTimeout(this.isLoading = true, 700)
+      setTimeout(this.isLoading = true, 1000)
     }
   }
 }
@@ -48,7 +48,7 @@ export default {
   height: 100%;
   display: block;
   margin: 0 auto;
-  transition: all 0.5s ease-in-out
+  transition: all 1s ease-in-out
 }
 .MainPage__title {
   font-family: 'Playfair Display', serif;
