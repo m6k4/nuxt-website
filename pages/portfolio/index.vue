@@ -1,24 +1,24 @@
 <template>
-    <div class="Portfolio">
-      <TheContentComponent :title="title" :content="content" :mainImage="kidsRoom"/>
-        <div class="Portfolio__image-grids">
-        <PorfolioImagesGrid :imageFirst="sinks" :imageSecond="kidsRoom" :imageThird="bathroom" :isBiggerImageLeft="false"/>
-        <PorfolioImagesGrid :imageFirst="kitchen" :imageSecond="sink" :imageThird="tv" :isBiggerImageLeft="true"/>
-        <PorfolioImagesGrid :imageFirst="bedroom" :imageSecond="whiteSink" :imageThird="kidsRoomGreen" :isBiggerImageLeft="false"/>
-        <PorfolioImagesGrid :imageFirst="circleMirror" :imageSecond="greySofa" :imageThird="yellowSofa" :isBiggerImageLeft="true"/>
+  <div class="Portfolio">
+    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" />
+    <div class="Portfolio__image-grids">
+      <PorfolioImagesGrid :image-first="sinks" :image-second="kidsRoom" :image-third="bathroom" :is-bigger-image-left="false" />
+      <PorfolioImagesGrid :image-first="kitchen" :image-second="sink" :image-third="tv" :is-bigger-image-left="true" />
+      <PorfolioImagesGrid :image-first="bedroom" :image-second="whiteSink" :image-third="kidsRoomGreen" :is-bigger-image-left="false" />
+      <PorfolioImagesGrid :image-first="circleMirror" :image-second="greySofa" :image-third="yellowSofa" :is-bigger-image-left="true" />
     </div>
-    </div>
-  </template>
+  </div>
+</template>
 <script>
 import TheContentComponent from '~/components/TheContentComponent'
 import PorfolioImagesGrid from '~/components/PorfolioImagesGrid'
 export default {
   name: 'PortfolioPage',
-  layout: 'page',
   components: {
     TheContentComponent,
     PorfolioImagesGrid
   },
+  layout: 'page',
   data () {
     return {
       kidsRoom: 'images/portfolio/kids_room.jpg',
