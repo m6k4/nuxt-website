@@ -1,6 +1,6 @@
 <template>
   <div class="Portfolio">
-    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" />
+    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :isScrollable="true" />
     <div class="Portfolio__image-grids">
       <PorfolioImagesGrid :image-first="sinks" :image-second="kidsRoom" :image-third="bathroom" :is-bigger-image-left="false" />
       <PorfolioImagesGrid :image-first="kitchen" :image-second="sink" :image-third="tv" :is-bigger-image-left="true" />
@@ -41,6 +41,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .Portfolio__image-grids{
-  margin-top: 5rem
+  margin-top: 80px
 }
 </style>

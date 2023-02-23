@@ -1,6 +1,6 @@
 <template>
   <div class="TheNavbar">
-    <div class="TheNavbar__navbar">
+    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translateY(-10vh)' : ''">
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
@@ -74,14 +74,25 @@ export default {
       facebook: '/images/facebook.png',
       instagram: '/images/instagram.png',
       activeTab: '',
-      showMore: false
+      showMore: false,
+      isScrollHidden: false
     }
   },
   methods: {
     changeTab (tab) {
       this.activeTab = tab
       this.showMore = false
+    },
+    handleScroll () {
+      if (window.scrollY > 10) {
+        this.isScrollHidden = true
+      } else {
+        this.isScrollHidden = false
+      }
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -95,6 +106,9 @@ export default {
 }
 .TheNavbar__navbar {
   padding: 0 10%;
+  transition: 0.5s all ease-in;
+  z-index: 2;
+  background-color: #F0F0F0;
 }
 .TheNavbar__navbar-buttons a {
   color: black;
