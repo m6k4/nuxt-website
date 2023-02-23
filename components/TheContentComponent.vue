@@ -5,11 +5,12 @@
         :src="mainImage"
         alt="kids_room"
         class="TheContentComponent__image"
+        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
       >
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
         {{ title }}
       </h1>
-      <div class="TheContentComponent__content">
+      <div class="TheContentComponent__content" :style="isLoading ? 'opacity: 1' : 'opacity: 0'">
         {{ content }}
         <slot name="custom-content" />
       </div>
@@ -27,13 +28,19 @@ export default {
   props: ['title', 'content', 'mainImage'],
   data () {
     return {
-      isScrollingOnDesktop: false
+      isScrollingOnDesktop: false,
+      isLoading: false
     }
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+    this.changeLoadingState()
   },
-
+  beforeRouteEnter (to, from, next) {
+    next((vm) => {
+      vm.changeLoadingState()
+    })
+  },
   methods: {
     handleScroll () {
       if (window.innerWidth > 768) {
@@ -43,6 +50,9 @@ export default {
           this.isScrollingOnDesktop = false
         }
       }
+    },
+    changeLoadingState () {
+      setTimeout(this.isLoading = true, 1000)
     }
   }
 }
@@ -57,6 +67,7 @@ export default {
   height: 100%;
   width: 50%;
   object-fit: cover;
+  transition: all 1s ease-in-out
 }
 .TheContentComponent__title{
   font-family: 'Playfair Display', serif;
@@ -82,6 +93,7 @@ export default {
   right: 10%;
   font-weight: 500;
   text-transform: uppercase;
+  transition: all 1.5s ease;
 }
 .TheContentComponent__custom-content {
   position: absolute;

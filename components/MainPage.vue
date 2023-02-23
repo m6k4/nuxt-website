@@ -10,7 +10,7 @@
         <p>swiatlo.</p>
         <p>proporcja.</p>
       </div>
-      <div class="MainPage__content">
+      <div class="MainPage__content" :style="isLoading ? 'opacity: 1' : 'opacity: 0'">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
       </div>
     </div>
@@ -68,6 +68,7 @@ export default {
   right: 5rem;
   font-weight: 500;
   text-transform: uppercase;
+  transition: all .5s ease-in-out
 }
 @media only screen and (max-width: 1600px) {
   .MainPage__content {
