@@ -1,51 +1,74 @@
 <template>
   <div class="PorfolioImagesGrid">
     <div class="PorfolioImagesGrid__grid">
-      <div class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image" :style="!isBiggerImageLeft && 'height: 50%;'">
-        <ImageTitle :title="linkFirst.title" :content="linkFirst.subtitle" class="PorfolioImagesGrid__grid-text" />
+      <NuxtLink
+        :to="linkFirst.link"
+        class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image"
+        :style="!isBiggerImageLeft && 'height: 50%;'"
+      >
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkFirst.title"
+          :content="linkFirst.subtitle"
+        />
         <img
           :src="linkFirst.image"
           :alt="linkFirst.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
-      <div
+      </NuxtLink>
+      <NuxtLink
         v-if="!isBiggerImageLeft"
+        :to="linkFirst.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="linkSecond.title" :content="linkSecond.subtitle" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkSecond.title"
+          :content="linkSecond.subtitle"
+        />
         <img
           :src="linkSecond.image"
           :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
+      </NuxtLink>
     </div>
     <div class="PorfolioImagesGrid__grid">
-      <div
+      <NuxtLink
         v-if="isBiggerImageLeft"
+        :to="linkFirst.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="linkSecond.title" :content="linkSecond.subtitle" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkSecond.title"
+          :content="linkSecond.subtitle"
+        />
         <img
           :src="linkSecond.image"
           :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
-      <div
+      </NuxtLink>
+      <NuxtLink
+        :to="linkThird.link"
         class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
         :style="isBiggerImageLeft && 'height: 50%;'"
       >
-        <ImageTitle :title="linkThird.title" :content="linkThird.subtitle" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkThird.title"
+          :content="linkThird.subtitle"
+        />
         <img
           :src="linkThird.image"
           :alt="linkThird.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
