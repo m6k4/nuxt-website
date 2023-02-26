@@ -1,16 +1,16 @@
 <template>
-    <div class="Navy">
-      <TheContentComponent :title="title" :content="content" :mainImage="image"/>
-    </div>
-  </template>
+  <div class="Navy">
+    <TheContentComponent :title="title" :content="content" :main-image="image" />
+  </div>
+</template>
 <script>
 import TheContentComponent from '~/components/TheContentComponent'
 export default {
   name: 'NavyPage',
-  layout: 'page',
   components: {
     TheContentComponent
   },
+  layout: 'page',
   data () {
     return {
       image: 'images/image.jpg',
