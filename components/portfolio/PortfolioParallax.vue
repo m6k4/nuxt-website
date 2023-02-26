@@ -1,9 +1,9 @@
 <template>
   <div class="PortfolioParallax">
     <div class="PortfolioParallax__parallax" :style="{ backgroundImage: 'url(' + image + ')' }">
-    <div class="PortfolioParallax__parallax-title">
-      <h1>{{ title }}</h1>
-    </div>
+      <div class="PortfolioParallax__parallax-title">
+        <h1>{{ title }}</h1>
+      </div>
     </div>
     <slot name="content" />
   </div>
@@ -46,9 +46,8 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
   font-size: 5rem;
-  font-weight: 300;
   text-align: center;
   z-index: 1;
   color: #fff
@@ -58,6 +57,7 @@ export default {
   margin: 0;
   padding: 0;
   font-size: 6rem;
+  font-weight: 400;
 }
 @media only screen and (max-width: 1150px) {
   .PortfolioParallax__parallax-title h1{
