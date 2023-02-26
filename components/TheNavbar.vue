@@ -1,6 +1,6 @@
 <template>
   <div class="TheNavbar">
-    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translateY(-10vh)' : ''">
+    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translate3d(0, -10vh, 0)' : ''">
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
@@ -78,6 +78,9 @@ export default {
       isScrollHidden: false
     }
   },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
   methods: {
     changeTab (tab) {
       this.activeTab = tab
@@ -90,9 +93,6 @@ export default {
         this.isScrollHidden = false
       }
     }
-  },
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -230,22 +230,22 @@ export default {
     transition: all .5s ease-in-out;;
   }
   .TheNavbar__menu-burger::before {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0)
   }
   .TheNavbar__menu-burger::after {
-    transform: translateY(5px);
+    transform: translate3d(0, 5px, 0)
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger {
-    transform: translateX(-20px);
+    transform: translate3d(-20px, 0, 0);
     background: transparent;
     box-shadow: none;
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger::before {
-    transform: rotate(45deg) translate(14px, -14px);
+    transform: rotate(45deg) translate3d(14px, -14px, 0);
     background-color: white;
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger::after {
-    transform: rotate(-45deg) translate(14px, 14px);
+    transform: rotate(-45deg) translate3d(14px, 14px, 0);
     background-color: white;
   }
   .TheNavbar__icons {
