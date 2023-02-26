@@ -19,7 +19,7 @@
       </NuxtLink>
       <NuxtLink
         v-if="!isBiggerImageLeft"
-        :to="linkFirst.link"
+        :to="linkSecond.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
@@ -38,7 +38,7 @@
     <div class="PorfolioImagesGrid__grid">
       <NuxtLink
         v-if="isBiggerImageLeft"
-        :to="linkFirst.link"
+        :to="linkSecond.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
