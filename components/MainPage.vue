@@ -20,7 +20,7 @@ export default {
   name: 'MainPage',
   data () {
     return {
-      image: 'images/main.jpeg',
+      image: '/images/main.jpeg',
       isLoading: false
     }
   },

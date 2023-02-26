@@ -18,7 +18,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .TheFooter {
-  height: 100%;
   overflow: auto;
   }
 .TheFooter__content{
