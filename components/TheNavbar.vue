@@ -31,7 +31,7 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
-      <div style="position: relative; z-index: 3;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
+      <div style="position: relative; z-index: 11;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
         <div class="TheNavbar__menu-burger" />
       </div>
     </div>
@@ -180,7 +180,7 @@ export default {
     position: absolute;
     height: 100vh;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     display: block;
     transition: all 0.3s ease-out;
   }

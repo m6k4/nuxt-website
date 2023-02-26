@@ -22,7 +22,7 @@
 import PortfolioParallax from '~/components/portfolio/PortfolioParallax.vue'
 
 export default {
-  name: 'ContactPage',
+  name: 'PortfolioSinglePage',
   components: {
     PortfolioParallax
   },
@@ -78,4 +78,10 @@ export default {
       margin: 2rem 0;
     }
   }
+@media only screen and (max-width: 576px) {
+    .Portfolio1__description {
+    padding: 1rem;
+    font-size: 0.9rem;
+    }
+}
 </style>
