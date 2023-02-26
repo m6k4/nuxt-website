@@ -2,10 +2,10 @@
   <div class="PorfolioImagesGrid">
     <div class="PorfolioImagesGrid__grid">
       <div class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image" :style="!isBiggerImageLeft && 'height: 50%;'">
-        <ImageTitle :title="'.Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle :title="linkFirst.title" :content="linkFirst.subtitle" class="PorfolioImagesGrid__grid-text" />
         <img
-          :src="imageFirst"
-          :alt="imageFirstDescription"
+          :src="linkFirst.image"
+          :alt="linkFirst.description"
           class="PorfolioImagesGrid__image"
         >
       </div>
@@ -14,10 +14,10 @@
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle :title="linkSecond.title" :content="linkSecond.subtitle" class="PorfolioImagesGrid__grid-text" />
         <img
-          :src="imageSecond"
-          :alt="imageSecondDescription"
+          :src="linkSecond.image"
+          :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
       </div>
@@ -28,10 +28,10 @@
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle :title="linkSecond.title" :content="linkSecond.subtitle" class="PorfolioImagesGrid__grid-text" />
         <img
-          :src="imageSecond"
-          :alt="imageSecondDescription"
+          :src="linkSecond.image"
+          :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
       </div>
@@ -39,10 +39,10 @@
         class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
         :style="isBiggerImageLeft && 'height: 50%;'"
       >
-        <ImageTitle :title="'.Nazwa 3'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle :title="linkThird.title" :content="linkThird.subtitle" class="PorfolioImagesGrid__grid-text" />
         <img
-          :src="imageThird"
-          :alt="imageThirdDescription"
+          :src="linkThird.image"
+          :alt="linkThird.description"
           class="PorfolioImagesGrid__image"
         >
       </div>
@@ -57,7 +57,24 @@ export default {
     ImageTitle
   },
   layout: 'page',
-  props: ['imageFirst', 'imageFirstDescription', 'imageSecond', 'imageSecondDescription', 'imageThird', 'imageThirdDescription', 'isBiggerImageLeft']
+  props: {
+    linkFirst: {
+      type: Object,
+      required: true
+    },
+    linkSecond: {
+      type: Object,
+      required: true
+    },
+    linkThird: {
+      type: Object,
+      required: true
+    },
+    isBiggerImageLeft: {
+      type: Boolean,
+      required: true
+    }
+  }
 }
 </script>
 <style lang="css" scoped>
