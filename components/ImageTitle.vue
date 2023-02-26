@@ -32,6 +32,7 @@ export default {
   }
   .ImageTitle__content {
     font-size: 0.9rem;
+    color: white;
   }
   @media only screen and (max-width: 1000px) {
   .ImageTitle__title{
