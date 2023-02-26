@@ -90,26 +90,26 @@ export default {
   filter: brightness(70%);
 }
 .PorfolioImagesGrid__grid-item-1 img {
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
 }
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 img {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 .PorfolioImagesGrid__grid-item-3 img:hover{
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
 }
 .PorfolioImagesGrid__grid-item-2 img:hover {
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
 }
 .PorfolioImagesGrid__grid-item-1 img:hover {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 .PorfolioImagesGrid__grid-text {
   left: 0;
   right: 0;
   opacity: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
   position: absolute;
   transition: all 0.3s ease-in-out;
   pointer-events: none;

@@ -1,6 +1,6 @@
 <template>
   <div class="TheNavbar">
-    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translateY(-10vh)' : ''">
+    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translate3d(0, -10vh, 0)' : ''">
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
@@ -31,7 +31,7 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
-      <div style="position: relative; z-index: 3;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
+      <div style="position: relative; z-index: 11;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
         <div class="TheNavbar__menu-burger" />
       </div>
     </div>
@@ -78,6 +78,9 @@ export default {
       isScrollHidden: false
     }
   },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
   methods: {
     changeTab (tab) {
       this.activeTab = tab
@@ -90,9 +93,6 @@ export default {
         this.isScrollHidden = false
       }
     }
-  },
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -180,7 +180,7 @@ export default {
     position: absolute;
     height: 100vh;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     display: block;
     transition: all 0.3s ease-out;
   }
@@ -230,22 +230,22 @@ export default {
     transition: all .5s ease-in-out;;
   }
   .TheNavbar__menu-burger::before {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0)
   }
   .TheNavbar__menu-burger::after {
-    transform: translateY(5px);
+    transform: translate3d(0, 5px, 0)
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger {
-    transform: translateX(-20px);
+    transform: translate3d(-20px, 0, 0);
     background: transparent;
     box-shadow: none;
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger::before {
-    transform: rotate(45deg) translate(14px, -14px);
+    transform: rotate(45deg) translate3d(14px, -14px, 0);
     background-color: white;
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger::after {
-    transform: rotate(-45deg) translate(14px, 14px);
+    transform: rotate(-45deg) translate3d(14px, 14px, 0);
     background-color: white;
   }
   .TheNavbar__icons {
