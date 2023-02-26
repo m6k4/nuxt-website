@@ -1,6 +1,6 @@
 <template>
   <div class="Portfolio">
-    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :isScrollable="true" />
+    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :is-scrollable="true" />
     <div class="Portfolio__image-grids">
       <PorfolioImagesGrid :image-first="sinks" :image-second="kidsRoom" :image-third="bathroom" :is-bigger-image-left="false" />
       <PorfolioImagesGrid :image-first="kitchen" :image-second="sink" :image-third="tv" :is-bigger-image-left="true" />

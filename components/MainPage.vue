@@ -1,19 +1,19 @@
 <template>
-    <div class="MainPage">
-      <img
-        :src="image"
-        alt="living_room"
-        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-        >
-      <div class="MainPage__title" :style="isLoading ? 'top: 2rem' : 'top: 0'">
-        <p>przestrzen.</p>
-        <p>swiatlo.</p>
-        <p>proporcja.</p>
-      </div>
-      <div class="MainPage__content" :style="isLoading ? 'right: 5rem; opacity: 1' : 'right: 0; opacity: 0'">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-      </div>
+  <div class="MainPage">
+    <img
+      :src="image"
+      alt="living_room"
+      :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+    >
+    <div class="MainPage__title" :style="isLoading ? 'top: 2rem' : 'top: 0'">
+      <p>przestrzen.</p>
+      <p>swiatlo.</p>
+      <p>proporcja.</p>
     </div>
+    <div class="MainPage__content" :style="isLoading ? 'right: 5rem; opacity: 1' : 'right: 0; opacity: 0'">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+    </div>
+  </div>
 </template>
 <script>
 export default {

@@ -1,9 +1,13 @@
 <template>
-    <div class="ImageTitile">
-        <p class="ImageTitle__title">{{ title }}</p>
-        <p class="ImageTitle__content">{{ content }}</p>
-    </div>
-  </template>
+  <div class="ImageTitile">
+    <p class="ImageTitle__title">
+      {{ title }}
+    </p>
+    <p class="ImageTitle__content">
+      {{ content }}
+    </p>
+  </div>
+</template>
 
 <script>
 export default {

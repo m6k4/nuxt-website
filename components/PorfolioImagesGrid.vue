@@ -52,7 +52,7 @@
 <script>
 import ImageTitle from '~/components/ImageTitle'
 export default {
-  name: 'TheContentComPorfolioImagesGridponent',
+  name: 'PorfolioImagesGrid',
   components: {
     ImageTitle
   },

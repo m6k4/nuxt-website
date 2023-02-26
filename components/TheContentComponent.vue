@@ -14,8 +14,8 @@
         {{ content }}
         <slot name="custom-content" />
       </div>
-      <div v-if="isScrollable" class="TheContentComponent__arrow" @click="scrollTo" :style="isScrollingActionSet ? 'transform: rotate(-90deg); filter: invert(0.25);' : 'transform: rotate(90deg); filter: invert(0.7);' ">
-        <img src="https://img.icons8.com/android/48/null/left.png"/>
+      <div v-if="isScrollable" class="TheContentComponent__arrow" :style="isScrollingActionSet ? 'transform: rotate(-90deg); filter: invert(0.25);' : 'transform: rotate(90deg); filter: invert(0.7);' " @click="scrollTo">
+        <img src="https://img.icons8.com/android/48/null/left.png">
       </div>
     </div>
     <div class="TheContentComponent__content-mobile">
@@ -27,6 +27,11 @@
 <script>
 export default {
   name: 'TheContentComponent',
+  beforeRouteEnter (to, from, next) {
+    next((vm) => {
+      vm.changeLoadingState()
+    })
+  },
   layout: 'page',
   props: ['title', 'content', 'mainImage', 'isScrollable'],
   data () {
@@ -39,11 +44,6 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.changeLoadingState()
-  },
-  beforeRouteEnter (to, from, next) {
-    next((vm) => {
-      vm.changeLoadingState()
-    })
   },
   methods: {
     handleScroll () {
