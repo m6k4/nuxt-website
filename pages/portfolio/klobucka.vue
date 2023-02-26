@@ -1,0 +1,103 @@
+<template>
+  <PortfolioParallax image="/images/portfolio/klobucka/klobucka1.jpg" title="Kłobucka">
+    <template #content>
+      <div class="Portfolio3__content">
+        <div class="Portfolio3__description">
+          <p>Mieszkanie na warszawskim Ursynowie to przede wszystkim przemyślana i funkcjonalna przestrzeń, której aranżacja została zaprojektowana w taki sposób aby wnętrza były jednocześnie nowoczesne i stylowe. W tym niewielkim na pozór wnętrzu udało się wygospodarować miejsce na realizację funkcjonalnej kuchni z hokerami dostępnymi od strony pokoju dziennego, stół dla czterech osób oraz wygodną sofę z dodatkowym podnóżkiem, który razem z sofą może tworzyć narożnik lub stanowić niezależne siedzisko.</p>
+        </div>
+        <div class="Portfolio3_image-container">
+          <img :src="image1" alt="living-room" class="Portfolio3__img">
+        </div>
+        <div class="Portfolio3__description">
+          <p>Aranżacja utrzymana jest w stonowanych i ciepłych barwach dla których tło stanowią białe ściany, a całoś dopełniają czarne dodatki elementy oświetlenia. Elegancji przestrzeni dodają płytki gresowe o marmurowym wzorze oraz stylowe, czarne lamele z obrzeżami wykończonymi w kolorze złotym. Punkt kulminacyjny stanowi oryginalna w swojej formie i kolorze sofa wraz podnóżkiem. Kolor zielony ożywia wnętrze i czyni je bardziej wyrazistym.</p>
+        </div>
+        <div class="Portfolio3_image-container">
+          <img :src="image3" alt="living-room" class="Portfolio3__img">
+        </div>
+        <div class="Portfolio3_image-container">
+          <img :src="image2" alt="kitchen" class="Portfolio3__img">
+        </div>
+        <div class="Portfolio3__description">
+          <p>W łazience dominuje szaro-biała tonacja, choć i tu zastosowano wyraźny akcent w postaci czarnej szafki umywalkowej oraz opraw oświetlenia mocowanych do tafli lustra. Istotnym i dominującym materiałem w tej przestrzeni jest gres o naturalnym kamiennym wzorze. Również w tym pomieszczeniu konsekwentnie postawiono na funkcjonalność wnętrza – maksymalizacje przestrzeni do przechowywania oraz ukryta w zabudowie meblowej pralka.</p>
+        </div>
+        <div class="Portfolio3_image-container">
+          <img :src="image5" alt="bathroom" class="Portfolio3__img">
+        </div>
+        <div class="Portfolio3_image-container">
+          <div class="Portfolio3__row">
+            <img :src="image4" alt="bathroom" class="Portfolio3__img">
+            <img :src="image6" alt="bathroom" class="Portfolio3__img">
+          </div>
+        </div>
+      </div>
+    </template>
+  </PortfolioParallax>
+</template>
+<script>
+import PortfolioParallax from '~/components/portfolio/PortfolioParallax.vue'
+
+export default {
+  name: 'PortfolioSinglePage',
+  components: {
+    PortfolioParallax
+  },
+  layout: 'page',
+  data () {
+    return {
+      image1: '/images/portfolio/klobucka/klobucka1.jpg',
+      image2: '/images/portfolio/klobucka/klobucka2.jpg',
+      image3: '/images/portfolio/klobucka/klobucka3.jpg',
+      image4: '/images/portfolio/klobucka/klobucka4.jpg',
+      image5: '/images/portfolio/klobucka/klobucka5.jpg',
+      image6: '/images/portfolio/klobucka/klobucka6.jpg'
+    }
+  }
+}
+</script>
+<style lang="css" scoped>
+.Portfolio3 {
+  padding: 0 10%;
+
+}
+
+.Portfolio3__img{
+  width: 100%;
+}
+
+.Portfolio3__description {
+  padding: 0 10%;
+  margin: 10rem 0;
+}
+
+.Portfolio3_image-container {
+  margin: 2rem 0;
+}
+
+.Portfolio3__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 8px;
+}
+
+.Portfolio3__row img{
+  width: 48%;
+}
+
+  @media only screen and (max-width: 750px) {
+    .Portfolio3__row {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .Portfolio3__row img{
+      width: 100%;
+    }
+
+    .Portfolio3__description {
+      padding: 0;
+      margin: 2rem 0;
+    }
+  }
+</style>
