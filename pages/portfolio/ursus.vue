@@ -59,7 +59,7 @@ export default {
       image3: '/images/portfolio/ursus/ursus3.jpg',
       image4: '/images/portfolio/ursus/ursus4.jpg',
       image5: '/images/portfolio/ursus/ursus1.jpg',
-      image6: '/images/portfolio/ursus/ursus1.jpg',
+      image6: '/images/portfolio/ursus/ursus10.jpg',
       image7: '/images/portfolio/ursus/ursus7.jpg',
       image8: '/images/portfolio/ursus/ursus8.jpg',
       image9: '/images/portfolio/ursus/ursus9.jpg'

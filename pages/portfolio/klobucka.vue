@@ -100,4 +100,10 @@ export default {
       margin: 2rem 0;
     }
   }
+@media only screen and (max-width: 576px) {
+    .Portfolio3__description {
+    padding: 1rem;
+    font-size: 0.9rem;
+    }
+}
 </style>
