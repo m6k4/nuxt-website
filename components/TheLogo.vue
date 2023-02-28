@@ -1,9 +1,11 @@
 <template>
-  <img
-    class="TheLogo"
-    :src="image"
-    alt="logo"
-  >
+  <NuxtLink to="/">
+    <img
+      class="TheLogo"
+      :src="image"
+      alt="logo"
+    >
+  </NuxtLink>
 </template>
 
 <script>
