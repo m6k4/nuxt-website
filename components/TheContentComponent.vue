@@ -3,7 +3,7 @@
     <div class="TheContentComponent">
       <img
         :src="mainImage"
-        alt="kids_room"
+        alt="kids room"
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
       >
@@ -15,7 +15,7 @@
         <slot name="custom-content" />
       </div>
       <div v-if="isScrollable" class="TheContentComponent__arrow" :style="isScrollingActionSet ? 'transform: rotate(-90deg); filter: invert(0.25);' : 'transform: rotate(90deg); filter: invert(0.7);' " @click="scrollTo">
-        <img src="https://img.icons8.com/android/48/null/left.png">
+        <img src="https://img.icons8.com/android/48/null/left.png" alt="arrow">
       </div>
     </div>
     <div class="TheContentComponent__content-mobile">
@@ -33,7 +33,24 @@ export default {
     })
   },
   layout: 'page',
-  props: ['title', 'content', 'mainImage', 'isScrollable'],
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    content: {
+      type: String,
+      default: ''
+    },
+    mainImage: {
+      type: String,
+      default: ''
+    },
+    isScrollable: {
+      type: Boolean,
+      default: true
+    }
+  },
   data () {
     return {
       isScrollingOnDesktop: false,
@@ -60,7 +77,6 @@ export default {
     },
     scrollTo () {
       const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-      console.log(currentScrollPos)
       if (currentScrollPos >= window.innerHeight) {
         window.scrollTo({ top: 0, behavior: 'smooth' })
         this.isScrollingActionSet = true

@@ -2,7 +2,7 @@
   <div class="MainPage">
     <img
       :src="image"
-      alt="living_room"
+      alt="background image with living room"
       :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
     >
     <div class="MainPage__title" :style="isLoading ? 'top: 2rem' : 'top: 0'">

@@ -12,7 +12,16 @@
 <script>
 export default {
   name: 'ImageTitle',
-  props: ['title', 'content']
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    content: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
   <style lang="css" scoped>

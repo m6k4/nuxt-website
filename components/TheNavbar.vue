@@ -20,10 +20,10 @@
       </div>
       <div class="TheNavbar__icons">
         <a href="#" class="facebook">
-          <img :src="facebook">
+          <img :src="facebook" alt="facebook icon">
         </a>
         <a href="#" class="instagram">
-          <img :src="instagram">
+          <img :src="instagram" alt="instagram icon">
         </a>
       </div>
     </div>
@@ -51,10 +51,10 @@
         </NuxtLink>
         <div class="TheNavbar__icons">
           <a href="#" class="facebook">
-            <img :src="facebook">
+            <img :src="facebook" alt="facebook icon">
           </a>
           <a href="#" class="instagram">
-            <img :src="instagram">
+            <img :src="instagram" alt="instagram icon">
           </a>
         </div>
       </div>

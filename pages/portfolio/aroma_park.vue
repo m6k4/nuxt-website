@@ -6,12 +6,12 @@
           <p>Projekt apartamentu zlokalizowanego na warszawskiej Białołęce w inwestycji Aroma Park. Mimo niedużej powierzchni lokalu, dzięki niewielkim zmianom układu pomieszczeń, udało się zrealizować bardzo funkcjonalną i spójną wizualnie przestrzeń. Wnętrze jest wyraziste i kontrastowe a jednocześnie kameralne i przytulne. We wszystkich pomieszczeniach panuje podobna kolorystyka – dominują czerń i szarości, a duża ilość drewnianych wykończeń w różnej postaci ocieplają wnętrze.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image6" alt="living-room" class="Portfolio__img">
+          <img :src="image6" alt="living room" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image5" alt="living-room" class="Portfolio__img">
-            <img :src="image2" alt="living-room" class="Portfolio__img">
+            <img :src="image5" alt="living room" class="Portfolio__img">
+            <img :src="image2" alt="living room" class="Portfolio__img">
           </div>
           <div class="Portfolio__row">
             <img :src="image3" alt="kitchen" class="Portfolio__img">
