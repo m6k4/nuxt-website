@@ -61,15 +61,14 @@ export default {
 }
 
 .ContactInfo__title {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
 .ContactInfo__description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 1.5rem;
 }
 
 .ContactInfo__contact-details {
@@ -85,7 +84,7 @@ export default {
   display: flex;
   gap: 4rem;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 @media only screen and (max-width: 750px) {

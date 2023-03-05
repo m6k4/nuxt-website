@@ -2,21 +2,18 @@
   <div class="ThePage">
     <TheNavbar class="TheNavbar" />
     <Nuxt />
-    <ArrowToScroll />
     <TheFooter class="TheFooter" />
   </div>
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
-import ArrowToScroll from '~/components/ArrowToScroll'
 
 export default {
   name: 'ThePage',
   components: {
     TheNavbar,
-    TheFooter,
-    ArrowToScroll
+    TheFooter
   }
 }
 </script>
@@ -35,15 +32,14 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 3rem;
-}
-
-.Portfolio {
-  padding: 0 10%;
-
+  background-color: #F0F0F0;
+  z-index: 1;
 }
 </style>
 <style lang="css">
+.Portfolio__image-grids {
+  padding: 0 10%;
+}
 .Portfolio__img{
   width: 100%;
 }
@@ -82,6 +78,9 @@ export default {
     .Portfolio__description {
       padding: 0;
       margin: 2rem 0;
+    }
+    .Portfolio__image-grids {
+      padding: 0;
     }
   }
   @media only screen and (max-width: 576px) {

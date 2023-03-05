@@ -78,16 +78,16 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .ContactForm__title .main-title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
 .ContactForm__title .subtitle {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -123,7 +123,7 @@ export default {
   padding: 0.5rem;
   border-bottom: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   outline: none;
   resize: none;
   overflow: hidden;
@@ -131,12 +131,8 @@ export default {
   outline: 0;
   border-color: #ccc;
   background-color: transparent;
-}
-
-.ContactForm__form-label textarea {
   height: 1rem;
 }
-
 .ContactForm__form button {
   width: 40%;
   padding: 0.5rem;
@@ -146,6 +142,7 @@ export default {
   background-color: #2a2a2a;
   color: #ccc;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .ContactForm__form button:hover {

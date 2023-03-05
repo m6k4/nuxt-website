@@ -10,7 +10,7 @@
       <p>swiatlo.</p>
       <p>proporcja.</p>
     </div>
-    <div class="MainPage__content" :style="isLoading ? 'right: 5rem; opacity: 1' : 'right: 0; opacity: 0'">
+    <div :class="`MainPage__content ${!isLoading && 'MainPage__content-animate'}`">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
     </div>
   </div>
@@ -58,26 +58,36 @@ export default {
   text-transform: uppercase;
   font-size: 4.5vw;
   line-height: 1rem;
-  transition: all .5s ease-in-out
+  transition: all 1.5s ease-in-out
 }
 .MainPage__content {
   position: absolute;
   bottom: 15rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: 40%;
   font-weight: 500;
   text-transform: uppercase;
-  transition: all 1.5s ease-in-out
+  transition: all 1.5s ease-in-out;
+  right: 5rem ;
+  opacity: 1
+}
+.MainPage__content-animate {
+  right: 0;
+  opacity: 0;
 }
 @media only screen and (max-width: 1600px) {
   .MainPage__content {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 750px) {
   .MainPage__title {
     font-size: 2rem;
     left: 2rem;
+  }
+  .MainPage__content {
+    right: 1rem;
+    bottom: 5rem;
   }
 }
 </style>

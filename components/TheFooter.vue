@@ -27,7 +27,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  line-height: 1.5rem;
   padding: 0 10%;
 }
 .TheFooter__name {
