@@ -3,7 +3,7 @@
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
-          <p>Ursus – niegdyś dzielnica Warszawy o typowo industrialnym charakterze, kojarzona z licznymi zakładami produkcyjnymi. Dziś jest to miejsce w trakcie przemiany, która postępuje w ekspresowym tępie. Dzielnica staje się przyjazną i zaplanowaną urbanistycznie przestrzenią miejską ze zdecydowaną przewagą zabudowy mieszkaniowej.</p>
+          <p>Ursus– niegdyś dzielnica Warszawy o typowo industrialnym charakterze, kojarzona z licznymi zakładami produkcyjnymi. Dziś jest to miejsce w trakcie przemiany, która postępuje w ekspresowym tępie. Dzielnica staje się przyjazną i zaplanowaną urbanistycznie przestrzenią miejską ze zdecydowaną przewagą zabudowy mieszkaniowej.</p>
           <p>Wnętrze mieszkania zostało zaprojektowane w stylu loftowym. Industrialnego charakteru nadały wnętrzu takie materiały jak płytki z cegły rozbiórkowej oraz tynki imitujące beton. Akcenty stanowią dodatki w czarnych kolorach, a cała aranżacja została ocieplona poprzez zastosowanie drewna w wykończeniu mebli, blatu kuchennego i okładzin ściennych.</p>
         </div>
         <div class="Portfolio_image-container">
