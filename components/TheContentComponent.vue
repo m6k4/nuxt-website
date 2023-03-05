@@ -3,7 +3,7 @@
     <div class="TheContentComponent">
       <img
         :src="mainImage"
-        alt="kids_room"
+        alt="kids room"
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
       >
@@ -13,9 +13,6 @@
       <div :class="`TheContentComponent__content ${isScrollable && 'TheContentComponent__content-scroll'}`" :style="isLoading ? 'opacity: 1; right: 10%;' : 'opacity: 0; right: 0;'">
         {{ content }}
         <slot name="custom-content" />
-      </div>
-      <div v-if="isScrollable" class="TheContentComponent__arrow" @click="scrollTo" :style="isScrollingActionSet ? 'transform: rotate(-90deg); filter: invert(0.25);' : 'transform: rotate(90deg); filter: invert(0.7);' ">
-        <img src="https://img.icons8.com/android/48/null/left.png"/>
       </div>
     </div>
     <div class="TheContentComponent__content-mobile">
@@ -27,28 +24,47 @@
 <script>
 export default {
   name: 'TheContentComponent',
+  beforeRouteEnter (to, from, next) {
+    next((vm) => {
+      vm.changeLoadingState()
+    })
+  },
   layout: 'page',
-  props: ['title', 'content', 'mainImage', 'isScrollable'],
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    content: {
+      type: String,
+      default: ''
+    },
+    mainImage: {
+      type: String,
+      default: ''
+    },
+    isScrollable: {
+      type: Boolean,
+      default: true
+    }
+  },
   data () {
     return {
       isScrollingOnDesktop: false,
-      isLoading: false,
-      isScrollingActionSet: true
+      isLoading: false
     }
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.changeLoadingState()
   },
-  beforeRouteEnter (to, from, next) {
-    next((vm) => {
-      vm.changeLoadingState()
-    })
+  unmounted () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
       if (window.innerWidth > 768) {
-        if (window.scrollY > 0) {
+        if (this.scrollY > 0) {
           this.isScrollingOnDesktop = true
         } else {
           this.isScrollingOnDesktop = false
@@ -57,17 +73,6 @@ export default {
     },
     changeLoadingState () {
       setTimeout(this.isLoading = true, 1000)
-    },
-    scrollTo () {
-      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-      console.log(currentScrollPos)
-      if (currentScrollPos >= window.innerHeight) {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-        this.isScrollingActionSet = true
-      } else {
-        window.scrollTo({ top: window.innerHeight + 80, behavior: 'smooth' })
-        this.isScrollingActionSet = false
-      }
     }
   }
 }
@@ -121,18 +126,7 @@ export default {
 .TheContentComponent__content-mobile {
   display: none;
 }
-.TheContentComponent__arrow {
-  position: fixed;
-  bottom: 4rem;
-  right: 15rem;
-  z-index: 3;
-  cursor: pointer;
-  filter: invert(0.25);
-  transition: 0.3s all;
-}
-.TheContentComponent__arrow:hover {
-  filter: invert(0);
-}
+
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
     font-size: 0.6rem;
@@ -144,14 +138,6 @@ export default {
   }
   .TheContentComponent__title {
     font-size: 4.5rem;
-  }
-  .TheContentComponent__arrow {
-    width: 40px;
-    height: 40px;
-  }
-  .TheContentComponent__arrow img {
-    width: 100%;
-    height: 100%;
   }
   .TheContentComponent__content-scroll {
     bottom: 20%
@@ -195,9 +181,6 @@ export default {
     display: block;
     font-size: 0.8rem;
     margin: 4rem 0 5rem 0
-  }
-  .TheContentComponent__arrow {
-    display: none;
   }
 }
 @media only screen and (max-width: 750px) {

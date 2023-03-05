@@ -34,10 +34,10 @@ export default {
   name: 'ContactInfo',
   data () {
     return {
-      facebook: 'images/facebook.png',
-      instagram: 'images/instagram.png',
-      phone: 'images/phone.png',
-      email: 'images/email.png'
+      facebook: '/images/facebook.png',
+      instagram: '/images/instagram.png',
+      phone: '/images/phone.png',
+      email: '/images/email.png'
     }
   }
 }

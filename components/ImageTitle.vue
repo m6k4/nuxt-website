@@ -1,14 +1,27 @@
 <template>
-    <div class="ImageTitile">
-        <p class="ImageTitle__title">{{ title }}</p>
-        <p class="ImageTitle__content">{{ content }}</p>
-    </div>
-  </template>
+  <div class="ImageTitile">
+    <p class="ImageTitle__title">
+      {{ title }}
+    </p>
+    <p class="ImageTitle__content">
+      {{ content }}
+    </p>
+  </div>
+</template>
 
 <script>
 export default {
   name: 'ImageTitle',
-  props: ['title', 'content']
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    content: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
   <style lang="css" scoped>
@@ -28,6 +41,7 @@ export default {
   }
   .ImageTitle__content {
     font-size: 0.9rem;
+    color: white;
   }
   @media only screen and (max-width: 1000px) {
   .ImageTitle__title{

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainPage class="MainPage"/>
+    <MainPage class="MainPage" />
   </div>
 </template>
 

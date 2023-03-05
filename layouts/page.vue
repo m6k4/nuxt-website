@@ -2,17 +2,21 @@
   <div class="ThePage">
     <TheNavbar class="TheNavbar" />
     <Nuxt />
+    <ArrowToScroll />
     <TheFooter class="TheFooter" />
   </div>
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
+import ArrowToScroll from '~/components/ArrowToScroll'
 
 export default {
   name: 'ThePage',
   components: {
-    TheNavbar, TheFooter
+    TheNavbar,
+    TheFooter,
+    ArrowToScroll
   }
 }
 </script>

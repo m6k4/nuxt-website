@@ -1,63 +1,103 @@
 <template>
   <div class="PorfolioImagesGrid">
     <div class="PorfolioImagesGrid__grid">
-      <div class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image" :style="!isBiggerImageLeft && 'height: 50%;'">
-        <ImageTitle :title="'.Nazwa 1'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+      <NuxtLink
+        :to="linkFirst.link"
+        class="PorfolioImagesGrid__grid-item-1 PorfolioImagesGrid__image"
+        :style="!isBiggerImageLeft && 'height: 50%;'"
+      >
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkFirst.title"
+          :content="linkFirst.subtitle"
+        />
         <img
-          :src="imageFirst"
-          :alt="imageFirstDescription"
+          :src="linkFirst.image"
+          :alt="linkFirst.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
-      <div
+      </NuxtLink>
+      <NuxtLink
         v-if="!isBiggerImageLeft"
+        :to="linkSecond.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkSecond.title"
+          :content="linkSecond.subtitle"
+        />
         <img
-          :src="imageSecond"
-          :alt="imageSecondDescription"
+          :src="linkSecond.image"
+          :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
+      </NuxtLink>
     </div>
     <div class="PorfolioImagesGrid__grid">
-      <div
+      <NuxtLink
         v-if="isBiggerImageLeft"
+        :to="linkSecond.link"
         class="PorfolioImagesGrid__grid-item-2 PorfolioImagesGrid__image"
         style="height: 50%;"
       >
-        <ImageTitle :title="'.Nazwa 2'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkSecond.title"
+          :content="linkSecond.subtitle"
+        />
         <img
-          :src="imageSecond"
-          :alt="imageSecondDescription"
+          :src="linkSecond.image"
+          :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
-      <div
+      </NuxtLink>
+      <NuxtLink
+        :to="linkThird.link"
         class="PorfolioImagesGrid__grid-item-3 PorfolioImagesGrid__image"
         :style="isBiggerImageLeft && 'height: 50%;'"
       >
-        <ImageTitle :title="'.Nazwa 3'" :content="'wnętrza warszawa'" class="PorfolioImagesGrid__grid-text" />
+        <ImageTitle
+          class="PorfolioImagesGrid__grid-text"
+          :title="linkThird.title"
+          :content="linkThird.subtitle"
+        />
         <img
-          :src="imageThird"
-          :alt="imageThirdDescription"
+          :src="linkThird.image"
+          :alt="linkThird.description"
           class="PorfolioImagesGrid__image"
         >
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
 <script>
 import ImageTitle from '~/components/ImageTitle'
 export default {
-  name: 'TheContentComPorfolioImagesGridponent',
+  name: 'PorfolioImagesGrid',
   components: {
     ImageTitle
   },
   layout: 'page',
-  props: ['imageFirst', 'imageFirstDescription', 'imageSecond', 'imageSecondDescription', 'imageThird', 'imageThirdDescription', 'isBiggerImageLeft']
+  props: {
+    linkFirst: {
+      type: Object,
+      required: true
+    },
+    linkSecond: {
+      type: Object,
+      required: true
+    },
+    linkThird: {
+      type: Object,
+      required: true
+    },
+    isBiggerImageLeft: {
+      type: Boolean,
+      required: true
+    }
+  }
 }
 </script>
 <style lang="css" scoped>

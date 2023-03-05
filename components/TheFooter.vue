@@ -1,14 +1,14 @@
 <template>
   <div class="TheFooter">
-  <div class="TheFooter__content">
-    <div class="TheFooter__name">
-    <p>Architekt Łukasz Kowalski</p>
+    <div class="TheFooter__content">
+      <div class="TheFooter__name">
+        <p>Architekt Łukasz Kowalski</p>
+      </div>
+      <div>
+        <p>NAVY 2023</p>
+      </div>
+    </div>
   </div>
-  <div>
-    <p>NAVY 2023</p>
-  </div>
-</div>
-</div>
 </template>
 
 <script>
@@ -18,7 +18,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .TheFooter {
-  height: 100%;
   overflow: auto;
   }
 .TheFooter__content{
