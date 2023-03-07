@@ -56,7 +56,7 @@ export default {
     font-size: 1.8rem
   }
   .ImageTitle__content{
-    font-size: 0.7rem
+    font-size: 0.8rem
   }
 }
 
