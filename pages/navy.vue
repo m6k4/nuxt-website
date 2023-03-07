@@ -22,7 +22,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.Navy{
-  overflow-y: hidden;
-}
 </style>

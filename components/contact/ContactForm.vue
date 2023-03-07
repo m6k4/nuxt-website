@@ -86,11 +86,6 @@ export default {
   font-weight: 500;
 }
 
-.ContactForm__title .subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
 .ContactForm__form {
   width: 80%;
   display: flex;
@@ -133,7 +128,8 @@ export default {
   background-color: transparent;
 }
 
-.ContactForm__form-label textarea {
+.ContactForm__form-label textarea,
+.ContactForm__form-label input {
   height: 1rem;
 }
 

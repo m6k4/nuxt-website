@@ -153,9 +153,7 @@ export default {
 }
 @media only screen and (max-width: 1150px) {
   .TheContentComponent {
-    background-color: #D7CAC2;
     padding: 0;
-    margin-top: 5%
   }
   .TheContentComponent__image {
     width: 100%;
@@ -201,16 +199,15 @@ export default {
   }
   .TheContentComponent__title {
     font-size: 2.5rem;
-    top: -2.5rem;
+    top: -10rem;
   }
   .TheContentComponent__image {
     margin-top: 6%;
     height: 96%;
   }
   .TheContentComponent__content-mobile {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
-
 }
 @media only screen and (max-width: 440px) {
   .TheContentComponent__title {
