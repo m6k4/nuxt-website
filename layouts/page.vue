@@ -38,15 +38,17 @@ export default {
 }
 
 .TheFooter {
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 3rem;
+  background-color: #F0F0F0;
+  z-index: 1;
 }
-
-.Portfolio {
+</style>
+<style lang="css">
+.Portfolio__image-grids {
   padding: 0 10%;
 }
-
 @media only screen and (max-width: 1150px) {
   .ThePage {
     padding: 0;
@@ -58,8 +60,6 @@ export default {
 
 }
 
-</style>
-<style lang="css">
 .Portfolio__img{
   width: 100%;
 }
@@ -98,6 +98,9 @@ export default {
     .Portfolio__description {
       padding: 0;
       margin: 2rem 0;
+    }
+    .Portfolio__image-grids {
+      padding: 0;
     }
   }
   @media only screen and (max-width: 576px) {

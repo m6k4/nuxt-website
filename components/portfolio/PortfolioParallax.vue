@@ -1,5 +1,5 @@
 <template>
-  <div class="PortfolioParallax">
+  <div class="PortfolioParallax" :style="isLoading ? 'opacity: 1' : 'opacity: 0'">
     <div class="PortfolioParallax__parallax" :style="{ backgroundImage: 'url(' + image + ')' }">
       <div class="PortfolioParallax__parallax-title">
         <h1>{{ title }}</h1>
@@ -21,6 +21,20 @@ export default {
       type: String,
       required: true
     }
+  },
+  data () {
+    return {
+      isLoading: false
+    }
+  },
+  mounted () {
+    this.changeLoadingState()
+  },
+
+  methods: {
+    changeLoadingState () {
+      setTimeout(this.isLoading = true, 1000)
+    }
   }
 
 }
@@ -28,6 +42,7 @@ export default {
 <style lang="css" scoped>
 .PortfolioParallax {
   padding: 0 10%;
+  transition: all 1.5s ease-in-out
 }
 
 .PortfolioParallax__parallax {
@@ -37,6 +52,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  object-fit: cover;
 }
 
 .PortfolioParallax__parallax-title {
@@ -50,7 +66,7 @@ export default {
   font-size: 5rem;
   text-align: center;
   z-index: 1;
-  color: #fff
+  color: #fff;
 }
 
 .PortfolioParallax__parallax-title h1 {

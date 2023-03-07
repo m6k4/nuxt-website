@@ -99,7 +99,7 @@ export default {
   font-size: 5rem;
   line-height: 1rem;
   font-weight: 400;
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
 }
 .TheContentComponent__title.move{
   top: 5%;
@@ -108,7 +108,7 @@ export default {
 .TheContentComponent__content {
   position: absolute;
   bottom: 20%;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: 35%;
   font-weight: 500;
   text-transform: uppercase;
@@ -117,7 +117,7 @@ export default {
 .TheContentComponent__custom-content {
   position: absolute;
   bottom: 20%;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: 35%;
   right: 10%;
   font-weight: 500;
@@ -129,7 +129,7 @@ export default {
 
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     width: 33%;
     bottom: 10%;
   }

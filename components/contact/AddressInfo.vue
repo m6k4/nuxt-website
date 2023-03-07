@@ -54,12 +54,8 @@ export default {
 }
 
 .AddressInfo__address-title .main-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
-}
-
-.AddressInfo__address-title .subtitle {
-  font-weight: 400;
 }
 
 .AddressInfo__address-description {
@@ -71,6 +67,7 @@ export default {
 }
 
 .AddressInfo__address-description p {
+  font-size: 0.9rem;
   font-weight: 400;
   margin: 0.5rem 0;
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="Portfolio">
+    <ArrowToScroll />
     <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :is-scrollable="true" />
     <div class="Portfolio__image-grids">
       <PorfolioImagesGrid
@@ -33,11 +34,13 @@
 import TheContentComponent from '~/components/TheContentComponent'
 import PorfolioImagesGrid from '~/components/PorfolioImagesGrid'
 import { portfolioLinks } from '~/data/portfolio'
+import ArrowToScroll from '~/components/ArrowToScroll'
 export default {
   name: 'PortfolioPage',
   components: {
     TheContentComponent,
-    PorfolioImagesGrid
+    PorfolioImagesGrid,
+    ArrowToScroll
   },
   layout: 'page',
   data () {
@@ -50,8 +53,3 @@ export default {
   }
 }
 </script>
-<style lang="css" scoped>
-.Portfolio__image-grids{
-  margin-top: 80px
-}
-</style>
