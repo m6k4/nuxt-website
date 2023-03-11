@@ -6,7 +6,7 @@
     :class="arrowRotationClass"
     @click="scrollTo"
   >
-    <img src="https://img.icons8.com/android/48/null/left.png" alt="arrow">
+    <img loading="lazy" src="https://img.icons8.com/android/48/null/left.png" alt="arrow">
   </div>
 </template>
 <script>

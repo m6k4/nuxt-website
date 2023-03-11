@@ -2,6 +2,7 @@
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
       <img
+        loading="lazy"
         :src="mainImage"
         alt="kids room"
         class="TheContentComponent__image"

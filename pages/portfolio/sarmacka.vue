@@ -6,12 +6,12 @@
           <p>Są projekty, w których jeden materiał determinuje koncepcję całej aranżacji. Tak było również w przypadku tej aranżacji, której kluczowym elementem stała się wyjątkowa płytka FIO.PASSEPARTOUT. Materiał o bardzo geometrycznym, reliefowym wzorze w połączeniu z wielkoformatowym marmurowym gresem czynią to wnętrze nowoczesnym i eleganckim. Szlachetności dodaje złota armatura, lustro z zaokrąglonymi narożnikami w delikatnej czarnej ramie oraz towarzyszące mu kinkiety w pionowym układzie.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image2" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image1" alt="bathroom" class="Portfolio__img">
-            <img :src="image3" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
       </div>

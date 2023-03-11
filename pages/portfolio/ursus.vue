@@ -7,36 +7,36 @@
           <p>Wnętrze mieszkania zostało zaprojektowane w stylu loftowym. Industrialnego charakteru nadały wnętrzu takie materiały jak płytki z cegły rozbiórkowej oraz tynki imitujące beton. Akcenty stanowią dodatki w czarnych kolorach, a cała aranżacja została ocieplona poprzez zastosowanie drewna w wykończeniu mebli, blatu kuchennego i okładzin ściennych.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image2" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image1" alt="bathroom" class="Portfolio__img">
-            <img :src="image3" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
         <div class="Portfolio__description">
           <p>W realizacji inwestycji wykorzystano oświetlenie belgijskiej marki Wever & Ducre. Szklane, dymione klosze  skomponowane z trzech rozmiarów lamp wiszących serii Wetro nadaje części salonowej troche 'błysku’, natomiast lampy z serii Roomor zawieszone nad blatem kuchennym utrzymują swoją formą i matowym wykończeniem charakter wnętrza.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image4" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image4" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container" style="padding: 2.5rem 0;">
-          <img :src="image5" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image5" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image6" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image6" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio__description">
           <p>Nieocenione stały się jednak lampy Roomor na sztywnym połączeniu zwieszane nad szafkami nocnymi w pomieszczeniu sypialni. Ich forma idealnie wpisała się koncepcję zabudowy meblowej jaka została przedstawiona przez klientów w wytycznych do realizacji projektu..</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image7" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image7" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image8" alt="bathroom" class="Portfolio__img">
-            <img :src="image9" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image8" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image9" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
       </div>

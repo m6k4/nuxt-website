@@ -1,6 +1,7 @@
 <template>
   <div class="MainPage">
     <img
+      loading="lazy"
       :src="image"
       alt="background image with living room"
       :style="isLoading ? 'opacity: 1' : 'opacity: 0'"

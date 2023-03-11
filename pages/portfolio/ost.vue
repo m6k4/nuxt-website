@@ -7,12 +7,12 @@
           <p>Istotnym aspektem projektu jest także zróżnicowanie użytych faktur – zestawienie spieków o surowej, kamiennej strukturze z marmurowymi blatami w satynowym wykończeniu czy np. płytkami dekoracyjnymi o łagodnym reliefowym wzorze.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image2" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image3" alt="bathroom" class="Portfolio__img">
-            <img :src="image1" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@
           :content="linkFirst.subtitle"
         />
         <img
+          loading="lazy"
           :src="linkFirst.image"
           :alt="linkFirst.description"
           class="PorfolioImagesGrid__image"
@@ -29,6 +30,7 @@
           :content="linkSecond.subtitle"
         />
         <img
+          loading="lazy"
           :src="linkSecond.image"
           :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
@@ -48,6 +50,7 @@
           :content="linkSecond.subtitle"
         />
         <img
+          loading="lazy"
           :src="linkSecond.image"
           :alt="linkSecond.description"
           class="PorfolioImagesGrid__image"
@@ -64,6 +67,7 @@
           :content="linkThird.subtitle"
         />
         <img
+          loading="lazy"
           :src="linkThird.image"
           :alt="linkThird.description"
           class="PorfolioImagesGrid__image"

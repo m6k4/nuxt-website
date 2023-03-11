@@ -7,13 +7,13 @@
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio_image-container">
-            <img :src="image2" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
           </div>
           <div class="Portfolio__description">
             <p>Projekt utrzymany jest w odcieniach szarości z dominacją bieli i czerni. Pojawiają się również odcienie beżu, które mimo dużej ilości ciemnych elementów oraz czarnych dodatków, powodują, że przestrzeń jest ciepła w odbiorze. Dobrze i dyskretnie zaprojektowane oświetlenie oraz duże przeszklenia pozwalają zachować odpowiednią atmosferę wnętrza o każdej porze. Istotnym detalem stają się elementy sztukaterii naściennej, która odwzorowana została również na frontach szafki umywalkowej.</p>
           </div>
           <div class="Portfolio_image-container">
-            <img :src="image1" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
       </div>

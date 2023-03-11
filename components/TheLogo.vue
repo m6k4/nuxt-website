@@ -1,6 +1,7 @@
 <template>
   <NuxtLink to="/">
     <img
+      loading="lazy"
       class="TheLogo"
       :src="image"
       alt="logo"

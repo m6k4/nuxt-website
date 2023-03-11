@@ -7,12 +7,12 @@
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img :src="image1" alt="bathroom" class="Portfolio__img">
-            <img :src="image3" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
+            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
           </div>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image2" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
         </div>
       </div>
     </template>

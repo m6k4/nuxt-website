@@ -6,10 +6,10 @@
           <p>Himalaya Crystal to nazwa serii spieków kwarcowych od producenta NEOLITH. Materiał ten stał się inspiracją przy aranżacji przestrzeni aneksu kuchennego w apartamencie na warszawskiej Pradze. Połączenie jasnego, kryształowego spieku o charakterystycznym złoto-miedzianym użyłowaniu z różowym wykończeniem szafek wiszących, nadało subtelny i elegancki efekt całej zabudowie kuchennej.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img :src="image2" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
         </div>
         <div class="Portfolio_image-container" style="padding-top: 2.5rem">
-          <img :src="image1" alt="bathroom" class="Portfolio__img">
+          <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
         </div>
       </div>
     </template>

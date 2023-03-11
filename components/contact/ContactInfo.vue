@@ -13,16 +13,16 @@
       </div>
       <div class="socials">
         <a href="tel:+48666060169" title target="_self" class="phone">
-          <img :src="phone" alt="phone icon">
+          <img loading="lazy" :src="phone" alt="phone icon">
         </a>
         <a href="mailto:kontakt@navy.com.pl" title="" target="_self" class="email">
-          <img :src="email" alt="email icon">
+          <img loading="lazy" :src="email" alt="email icon">
         </a>
         <a href="http://facebook.com/navyinteriors" title="" target=" _blank" class="facebook">
-          <img :src="facebook" alt="facebook icon">
+          <img loading="lazy" :src="facebook" alt="facebook icon">
         </a>
         <a href="http://instagram.com/navy_interiors" title="" target=" _blank" class="instagram">
-          <img :src="instagram" alt="instagram icon">
+          <img loading="lazy" :src="instagram" alt="instagram icon">
         </a>
       </div>
     </div>
