@@ -1,11 +1,12 @@
 <template>
   <NuxtLink to="/">
-    <img
-      loading="lazy"
+    <nuxt-img
+      :lazy="true"
+      format="webp"
       class="TheLogo"
       :src="image"
       alt="logo"
-    >
+    />
   </NuxtLink>
 </template>
 
@@ -14,7 +15,7 @@ export default {
   name: 'TheLogo',
   data () {
     return {
-      image: '/images/logo.png'
+      image: '/images/logo.webp'
     }
   }
 }

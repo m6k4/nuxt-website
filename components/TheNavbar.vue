@@ -51,10 +51,20 @@
         </NuxtLink>
         <div class="TheNavbar__icons">
           <a href="#" class="facebook">
-            <img loading="lazy" :src="facebook" alt="facebook icon">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="facebook"
+              alt="facebook icon"
+            />
           </a>
           <a href="#" class="instagram">
-            <img loading="lazy" :src="instagram" alt="instagram icon">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="instagram"
+              alt="instagram icon"
+            />
           </a>
         </div>
       </div>
@@ -71,8 +81,8 @@ export default {
   },
   data () {
     return {
-      facebook: '/images/facebook.png',
-      instagram: '/images/instagram.png',
+      facebook: '/images/facebook.webp',
+      instagram: '/images/instagram.webp',
       activeTab: '',
       showMore: false,
       isScrollHidden: false
