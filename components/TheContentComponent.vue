@@ -12,7 +12,7 @@
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
         {{ title }}
       </h1>
-      <div :class="`TheContentComponent__content ${isScrollable && 'TheContentComponent__content-scroll'}`" :style="isLoading ? 'opacity: 1; right: 10%;' : 'opacity: 0; right: 0;'">
+      <div class="TheContentComponent__content" :class="{ 'show': isLoading }">
         {{ content }}
         <slot name="custom-content" />
       </div>
@@ -118,8 +118,17 @@ export default {
   font-size: 0.9rem;
   width: 35%;
   font-weight: 500;
+  right: 10%;
   text-transform: uppercase;
-  transition: all 1.5s ease;
+  transition: all 2s ease;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.TheContentComponent__content.show {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.5s;
 }
 .TheContentComponent__custom-content {
   position: absolute;
