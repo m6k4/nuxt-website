@@ -9,7 +9,7 @@
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
       />
-      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
+      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
         {{ title }}
       </h1>
       <div :class="`TheContentComponent__content ${isScrollable && 'TheContentComponent__content-scroll'}`" :style="isLoading ? 'opacity: 1; right: 10%;' : 'opacity: 0; right: 0;'">
