@@ -85,6 +85,14 @@ export default {
     font-size: 4rem;
   }
 }
+@media only screen and (max-width: 750px) {
+  .PortfolioParallax__parallax {
+    height: 90vh;
+    min-height: 90vh;
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .PortfolioParallax__parallax-title h1{
     font-size: 3rem;
