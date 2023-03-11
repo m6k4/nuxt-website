@@ -26,7 +26,7 @@ export default {
 }
 @media only screen and (max-width: 1150px) {
   .Offer {
-    overflow-y: auto;
+    overflow-y: visible;
   }
 }
 </style>

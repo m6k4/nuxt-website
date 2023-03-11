@@ -1,12 +1,12 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-      <img
-        :src="mainImage"
-        alt="kids room"
-        class="TheContentComponent__image"
-        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-      >
+        <img
+          :src="mainImage"
+          alt="kids room"
+          class="TheContentComponent__image"
+          :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+        >
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
         {{ title }}
       </h1>
@@ -54,6 +54,9 @@ export default {
       isLoading: false
     }
   },
+  created () {
+    this.changeLoadingState()
+  },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.changeLoadingState()
@@ -72,7 +75,9 @@ export default {
       }
     },
     changeLoadingState () {
-      setTimeout(this.isLoading = true, 1000)
+      setTimeout(() => {
+        this.isLoading = true
+      }, 100)
     }
   }
 }
@@ -153,7 +158,6 @@ export default {
 }
 @media only screen and (max-width: 1150px) {
   .TheContentComponent {
-    background-color: #D7CAC2;
     padding: 0;
     margin-top: 5%
   }
@@ -184,42 +188,35 @@ export default {
   }
 }
 @media only screen and (max-width: 750px) {
+  .TheContentComponent {
+    margin-top: 0;
+  }
   .TheContentComponent__wrapper {
     padding: 0;
   }
   .TheContentComponent__title {
     font-size: 3rem;
+    bottom: 22%;
+    top: auto;
   }
   .TheContentComponent__content-mobile {
     padding: 0 5%;
     margin-top: 3rem;
+  }
+  .TheContentComponent__image {
+    height: 85%;
+    position: absolute;
+    margin-top: -10vh;
   }
 }
 @media only screen and (max-width: 576px) {
   .TheContentComponent__wrapper {
     padding: 0;
   }
-  .TheContentComponent__title {
-    font-size: 2.5rem;
-    top: -2.5rem;
-  }
-  .TheContentComponent__image {
-    margin-top: 6%;
-    height: 96%;
-  }
   .TheContentComponent__content-mobile {
     font-size: 0.8rem;
   }
 
 }
-@media only screen and (max-width: 440px) {
-  .TheContentComponent__title {
-    font-size: 2rem;
-    top: -2rem;
-  }
-  .TheContentComponent__image {
-    margin-top: 6%;
-    height: 98%;
-  }
-}
+
 </style>

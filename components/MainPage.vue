@@ -24,13 +24,18 @@ export default {
       isLoading: false
     }
   },
+  created () {
+    this.changeLoadingState()
+  },
   mounted () {
     this.changeLoadingState()
   },
 
   methods: {
     changeLoadingState () {
-      setTimeout(this.isLoading = true, 1000)
+      setTimeout(() => {
+        this.isLoading = true
+      }, 100)
     }
   }
 }

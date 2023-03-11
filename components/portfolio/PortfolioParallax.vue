@@ -33,7 +33,7 @@ export default {
 
   methods: {
     changeLoadingState () {
-      setTimeout(this.isLoading = true, 1000)
+      setTimeout(this.isLoading = true, 100)
     }
   }
 

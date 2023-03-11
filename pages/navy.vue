@@ -25,4 +25,9 @@ export default {
 .Navy{
   overflow-y: hidden;
 }
+@media only screen and (max-width: 1150px) {
+  .Navy {
+    overflow-y: visible;
+  }
+}
 </style>

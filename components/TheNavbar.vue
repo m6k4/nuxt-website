@@ -103,11 +103,11 @@ export default {
   color: black;
   position: relative;
   height: 10vh;
+  z-index: 2;
 }
 .TheNavbar__navbar {
   padding: 0 10%;
   transition: 0.5s all ease-in;
-  z-index: 2;
   background-color: #F0F0F0;
 }
 .TheNavbar__navbar-buttons a {
