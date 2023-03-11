@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/pulp_chair/pulp_chair1.jpg" title="Pulp chair">
+  <PortfolioParallax image="/images/portfolio/pulp_chair/pulp_chair1.webp" title="Pulp chair">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -7,8 +7,20 @@
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
-            <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image1"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image2"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
           </div>
         </div>
       </div>
@@ -26,8 +38,8 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/pulp_chair/pulp_chair1.jpg',
-      image2: '/images/portfolio/pulp_chair/pulp_chair2.jpg'
+      image1: '/images/portfolio/pulp_chair/pulp_chair1.webp',
+      image2: '/images/portfolio/pulp_chair/pulp_chair2.webp'
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/t_house/t_house1.jpg" title="T House">
+  <PortfolioParallax image="/images/portfolio/t_house/t_house1.webp" title="T House">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -7,12 +7,30 @@
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
-            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image1"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image3"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
           </div>
         </div>
         <div class="Portfolio_image-container">
-          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="image2"
+            alt="bathroom"
+            class="Portfolio__img"
+          />
         </div>
       </div>
     </template>
@@ -29,9 +47,9 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/t_house/t_house2.jpg',
-      image2: '/images/portfolio/t_house/t_house3.jpg',
-      image3: '/images/portfolio/t_house/t_house1.jpg'
+      image1: '/images/portfolio/t_house/t_house2.webp',
+      image2: '/images/portfolio/t_house/t_house3.webp',
+      image3: '/images/portfolio/t_house/t_house1.webp'
     }
   }
 }

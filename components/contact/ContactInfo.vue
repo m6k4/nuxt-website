@@ -13,16 +13,36 @@
       </div>
       <div class="socials">
         <a href="tel:+48666060169" title target="_self" class="phone">
-          <img loading="lazy" :src="phone" alt="phone icon">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="phone"
+            alt="phone icon"
+          />
         </a>
         <a href="mailto:kontakt@navy.com.pl" title="" target="_self" class="email">
-          <img loading="lazy" :src="email" alt="email icon">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="email"
+            alt="email icon"
+          />
         </a>
         <a href="http://facebook.com/navyinteriors" title="" target=" _blank" class="facebook">
-          <img loading="lazy" :src="facebook" alt="facebook icon">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="facebook"
+            alt="facebook icon"
+          />
         </a>
         <a href="http://instagram.com/navy_interiors" title="" target=" _blank" class="instagram">
-          <img loading="lazy" :src="instagram" alt="instagram icon">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="instagram"
+            alt="instagram icon"
+          />
         </a>
       </div>
     </div>
@@ -34,10 +54,10 @@ export default {
   name: 'ContactInfo',
   data () {
     return {
-      facebook: '/images/facebook.png',
-      instagram: '/images/instagram.png',
-      phone: '/images/phone.png',
-      email: '/images/email.png'
+      facebook: '/images/facebook.webp',
+      instagram: '/images/instagram.webp',
+      phone: '/images/phone.webp',
+      email: '/images/email.webp'
     }
   }
 }

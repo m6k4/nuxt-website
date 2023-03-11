@@ -1,11 +1,12 @@
 <template>
   <div class="MainPage">
-    <img
-      loading="lazy"
+    <nuxt-img
+      :lazy="true"
+      format="webp"
       :src="image"
       alt="background image with living room"
       :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-    >
+    />
     <div class="MainPage__title" :style="isLoading ? 'top: 2rem' : 'top: 0'">
       <p>przestrzen.</p>
       <p>swiatlo.</p>
@@ -21,7 +22,7 @@ export default {
   name: 'MainPage',
   data () {
     return {
-      image: '/images/main.jpeg',
+      image: '/images/main.webp',
       isLoading: false
     }
   },

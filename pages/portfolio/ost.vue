@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/ost_01/ost2.jpg" title="Ost 1">
+  <PortfolioParallax image="/images/portfolio/ost_01/ost2.webp" title="Ost 1">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -7,12 +7,30 @@
           <p>Istotnym aspektem projektu jest także zróżnicowanie użytych faktur – zestawienie spieków o surowej, kamiennej strukturze z marmurowymi blatami w satynowym wykończeniu czy np. płytkami dekoracyjnymi o łagodnym reliefowym wzorze.</p>
         </div>
         <div class="Portfolio_image-container">
-          <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
+          <nuxt-img
+            :lazy="true"
+            format="webp"
+            :src="image2"
+            alt="bathroom"
+            class="Portfolio__img"
+          />
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio__row">
-            <img loading="lazy" :src="image3" alt="bathroom" class="Portfolio__img">
-            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image3"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image1"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
           </div>
         </div>
       </div>
@@ -30,9 +48,9 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/ost_01/ost1.jpg',
-      image2: '/images/portfolio/ost_01/ost2.jpg',
-      image3: '/images/portfolio/ost_01/ost3.jpg'
+      image1: '/images/portfolio/ost_01/ost1.webp',
+      image2: '/images/portfolio/ost_01/ost2.webp',
+      image3: '/images/portfolio/ost_01/ost3.webp'
     }
   }
 }

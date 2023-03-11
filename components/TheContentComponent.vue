@@ -1,13 +1,14 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-      <img
-        loading="lazy"
+      <nuxt-img
+        :lazy="true"
+        format="webp"
         :src="mainImage"
         alt="kids room"
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-      >
+      />
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
         {{ title }}
       </h1>

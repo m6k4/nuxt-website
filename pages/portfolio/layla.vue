@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/layla_2/layla1.jpg" title="Layla">
+  <PortfolioParallax image="/images/portfolio/layla_2/layla1.webp" title="Layla">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -7,13 +7,25 @@
         </div>
         <div class="Portfolio_image-container">
           <div class="Portfolio_image-container">
-            <img loading="lazy" :src="image2" alt="bathroom" class="Portfolio__img">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image2"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
           </div>
           <div class="Portfolio__description">
             <p>Projekt utrzymany jest w odcieniach szarości z dominacją bieli i czerni. Pojawiają się również odcienie beżu, które mimo dużej ilości ciemnych elementów oraz czarnych dodatków, powodują, że przestrzeń jest ciepła w odbiorze. Dobrze i dyskretnie zaprojektowane oświetlenie oraz duże przeszklenia pozwalają zachować odpowiednią atmosferę wnętrza o każdej porze. Istotnym detalem stają się elementy sztukaterii naściennej, która odwzorowana została również na frontach szafki umywalkowej.</p>
           </div>
           <div class="Portfolio_image-container">
-            <img loading="lazy" :src="image1" alt="bathroom" class="Portfolio__img">
+            <nuxt-img
+              :lazy="true"
+              format="webp"
+              :src="image1"
+              alt="bathroom"
+              class="Portfolio__img"
+            />
           </div>
         </div>
       </div>
@@ -31,8 +43,8 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/layla_2/layla1.jpg',
-      image2: '/images/portfolio/layla_2/layla2.jpg'
+      image1: '/images/portfolio/layla_2/layla1.webp',
+      image2: '/images/portfolio/layla_2/layla2.webp'
     }
   }
 }
