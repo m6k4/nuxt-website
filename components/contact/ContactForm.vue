@@ -131,8 +131,13 @@ export default {
   outline: 0;
   border-color: #ccc;
   background-color: transparent;
+}
+
+.ContactForm__form-label textarea,
+.ContactForm__form-label input {
   height: 1rem;
 }
+
 .ContactForm__form button {
   width: 40%;
   padding: 0.5rem;
@@ -142,7 +147,6 @@ export default {
   background-color: #2a2a2a;
   color: #ccc;
   cursor: pointer;
-  margin-top: 1rem;
 }
 
 .ContactForm__form button:hover {
@@ -174,6 +178,7 @@ export default {
 @media only screen and (max-width: 750px) {
   .ContactForm__form {
     padding: 0 2rem;
+    width: 90%;
   }
 
   .ContactForm__form button {

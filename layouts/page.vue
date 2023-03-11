@@ -2,18 +2,27 @@
   <div class="ThePage">
     <TheNavbar class="TheNavbar" />
     <Nuxt />
+    <ArrowToScroll v-if="isArrowVisible" />
     <TheFooter class="TheFooter" />
   </div>
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
+import ArrowToScroll from '~/components/ArrowToScroll'
+import { urlWithScrollingArrow } from '~/utils/constants'
 
 export default {
   name: 'ThePage',
   components: {
     TheNavbar,
-    TheFooter
+    TheFooter,
+    ArrowToScroll
+  },
+  computed: {
+    isArrowVisible () {
+      return urlWithScrollingArrow.includes(this.$route.path)
+    }
   }
 }
 </script>
@@ -29,7 +38,7 @@ export default {
 }
 
 .TheFooter {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #F0F0F0;
@@ -40,6 +49,17 @@ export default {
 .Portfolio__image-grids {
   padding: 0 10%;
 }
+@media only screen and (max-width: 1150px) {
+  .ThePage {
+    padding: 0;
+  }
+
+  .Portfolio {
+    padding: 0;
+  }
+
+}
+
 .Portfolio__img{
   width: 100%;
 }

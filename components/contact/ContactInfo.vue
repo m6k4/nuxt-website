@@ -1,6 +1,6 @@
 <template>
   <div class="ContactInfo">
-    <div class="ContactInfo__title">
+    <div class="ContactInfo__description">
       Chętnie odpowiem na każde pytanie, zapraszam do kontaktu za pośrednictwem formularza dostępnego poniżej.
     </div>
     <div class="ContactInfo__description">

@@ -1,5 +1,5 @@
 <template>
-  <div class="PortfolioParallax"  :style="isLoading ? 'opacity: 1' : 'opacity: 0'">
+  <div class="PortfolioParallax" :style="isLoading ? 'opacity: 1' : 'opacity: 0'">
     <div class="PortfolioParallax__parallax" :style="{ backgroundImage: 'url(' + image + ')' }">
       <div class="PortfolioParallax__parallax-title">
         <h1>{{ title }}</h1>

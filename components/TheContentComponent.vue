@@ -1,12 +1,12 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-        <img
-          :src="mainImage"
-          alt="kids room"
-          class="TheContentComponent__image"
-          :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-        >
+      <img
+        :src="mainImage"
+        alt="kids room"
+        class="TheContentComponent__image"
+        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+      >
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
         {{ title }}
       </h1>
@@ -159,7 +159,6 @@ export default {
 @media only screen and (max-width: 1150px) {
   .TheContentComponent {
     padding: 0;
-    margin-top: 5%
   }
   .TheContentComponent__image {
     width: 100%;
@@ -213,10 +212,17 @@ export default {
   .TheContentComponent__wrapper {
     padding: 0;
   }
+  .TheContentComponent__title {
+    font-size: 2.5rem;
+    top: -10rem;
+  }
+  .TheContentComponent__image {
+    margin-top: 6%;
+    height: 96%;
+  }
   .TheContentComponent__content-mobile {
     font-size: 0.8rem;
   }
-
 }
 
 </style>

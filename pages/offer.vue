@@ -21,9 +21,6 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-.Offer{
-  overflow-y: hidden;
-}
 @media only screen and (max-width: 1150px) {
   .Offer {
     overflow-y: visible;
