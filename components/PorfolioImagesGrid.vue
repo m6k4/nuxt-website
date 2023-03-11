@@ -11,12 +11,14 @@
           :title="linkFirst.title"
           :content="linkFirst.subtitle"
         />
-        <img
-          loading="lazy"
-          :src="linkFirst.image"
-          :alt="linkFirst.description"
-          class="PorfolioImagesGrid__image"
-        >
+        <div class="PorfolioImagesGrid__image-container">
+          <img
+            loading="lazy"
+            :src="linkFirst.image"
+            :alt="linkFirst.description"
+            class="PorfolioImagesGrid__image"
+          >
+        </div>
       </NuxtLink>
       <NuxtLink
         v-if="!isBiggerImageLeft"
@@ -29,12 +31,14 @@
           :title="linkSecond.title"
           :content="linkSecond.subtitle"
         />
-        <img
-          loading="lazy"
-          :src="linkSecond.image"
-          :alt="linkSecond.description"
-          class="PorfolioImagesGrid__image"
-        >
+        <div class="PorfolioImagesGrid__image-container">
+          <img
+            loading="lazy"
+            :src="linkSecond.image"
+            :alt="linkSecond.description"
+            class="PorfolioImagesGrid__image"
+          >
+        </div>
       </NuxtLink>
     </div>
     <div class="PorfolioImagesGrid__grid">
@@ -49,12 +53,14 @@
           :title="linkSecond.title"
           :content="linkSecond.subtitle"
         />
-        <img
-          loading="lazy"
-          :src="linkSecond.image"
-          :alt="linkSecond.description"
-          class="PorfolioImagesGrid__image"
-        >
+        <div class="PorfolioImagesGrid__image-container">
+          <img
+            loading="lazy"
+            :src="linkSecond.image"
+            :alt="linkSecond.description"
+            class="PorfolioImagesGrid__image"
+          >
+        </div>
       </NuxtLink>
       <NuxtLink
         :to="linkThird.link"
@@ -66,12 +72,14 @@
           :title="linkThird.title"
           :content="linkThird.subtitle"
         />
-        <img
-          loading="lazy"
-          :src="linkThird.image"
-          :alt="linkThird.description"
-          class="PorfolioImagesGrid__image"
-        >
+        <div class="PorfolioImagesGrid__image-container">
+          <img
+            loading="lazy"
+            :src="linkThird.image"
+            :alt="linkThird.description"
+            class="PorfolioImagesGrid__image"
+          >
+        </div>
       </NuxtLink>
     </div>
   </div>
@@ -130,7 +138,12 @@ export default {
   height: 101%;
   object-fit: cover;
 }
-.PorfolioImagesGrid__image img:hover{
+.PorfolioImagesGrid__image-container {
+  height: 101%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.PorfolioImagesGrid__image-container:hover{
   filter: brightness(70%);
 }
 .PorfolioImagesGrid__grid-item-1 img {
