@@ -147,12 +147,9 @@ export default {
 
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     width: 33%;
     bottom: 10%;
-  }
-  .TheContentComponent__image {
-    width: 35rem;
   }
   .TheContentComponent__title {
     font-size: 4.5rem;
@@ -162,9 +159,6 @@ export default {
   }
 }
 @media only screen and (max-width: 1400px) {
-  .TheContentComponent__image {
-    margin-left: 1rem;
-  }
   .TheContentComponent__title {
     font-size: 4rem;
   }
