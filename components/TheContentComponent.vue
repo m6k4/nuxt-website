@@ -69,10 +69,12 @@ export default {
   methods: {
     handleScroll () {
       if (window.innerWidth > 768) {
-        if (this.scrollY > 0) {
-          this.isScrollingOnDesktop = true
-        } else {
-          this.isScrollingOnDesktop = false
+        if (this.isScrollable) {
+          if (window.scrollY > 0) {
+            this.isScrollingOnDesktop = true
+          } else {
+            this.isScrollingOnDesktop = false
+          }
         }
       }
     },
@@ -225,11 +227,12 @@ export default {
   }
   .TheContentComponent__title {
     font-size: 2.5rem;
-    top: -10rem;
+    /* top: -10rem; */
+    top: 74%;
   }
   .TheContentComponent__image {
     margin-top: 6%;
-    height: 96%;
+    height: 76%;
   }
   .TheContentComponent__content-mobile {
     font-size: 0.8rem;
