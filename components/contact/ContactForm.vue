@@ -126,14 +126,14 @@ export default {
   font-size: 0.9rem;
   outline: none;
   resize: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-width: 0 0 2px;
-  outline: 0;
+  /* outline: 0; */
   border-color: #ccc;
   background-color: transparent;
+  height: 3rem;
 }
 
-.ContactForm__form-label textarea,
 .ContactForm__form-label input {
   height: 1rem;
 }

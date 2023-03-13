@@ -19,10 +19,18 @@
         </NuxtLink>
       </div>
       <div class="TheNavbar__icons">
-        <a href="#" class="facebook">
+        <a
+          href="https://facebook.com"
+          class="facebook"
+          target="_blank"
+        >
           <img loading="lazy" :src="facebook" alt="facebook icon">
         </a>
-        <a href="#" class="instagram">
+        <a
+          href="https://instagram.com"
+          class="instagram"
+          target="_blank"
+        >
           <img loading="lazy" :src="instagram" alt="instagram icon">
         </a>
       </div>
@@ -31,11 +39,14 @@
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
-      <div style="position: relative; z-index: 11;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="showMore=!showMore">
+      <div style="position: relative; z-index: 11;" :class="showMore ? 'TheNavbar__menu open' : 'TheNavbar__menu'" @click="toggleMenu">
         <div class="TheNavbar__menu-burger" />
       </div>
     </div>
-    <div class="TheNavbar__mobile-content" :style="showMore ? 'height: 100vh' : 'height: 0'">
+    <div
+      class="TheNavbar__mobile-content"
+      :style="showMore ? `height: ${setMenuHeightForMobile()}; position: fixed` : 'height: 0'"
+    >
       <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
         <NuxtLink to="/portfolio">
           <span :class="{ active: activeTab === 'portfolio' }" @click="changeTab('portfolio')">Portfolio</span>
@@ -92,6 +103,14 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
+    toggleMenu () {
+      this.showMore = !this.showMore
+      if (this.showMore) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'auto'
+      }
+    },
     changeTab (tab) {
       this.activeTab = tab
       this.showMore = false
@@ -102,6 +121,15 @@ export default {
       } else {
         this.isScrollHidden = false
       }
+    },
+    setMenuHeightForMobile () {
+      if (window.innerWidth < 1150) {
+        const viewportHeight = window.innerHeight
+        const topBarHeight = window.visualViewport.offsetTop
+        const menuHeight = viewportHeight - topBarHeight
+        return `${menuHeight}px`
+      }
+      return '100vh'
     }
   }
 }
@@ -180,7 +208,7 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 3%
+    padding: 0 3%;
   }
   .TheNavbar__navbar {
     display: none;
@@ -188,7 +216,7 @@ export default {
   .TheNavbar__mobile-content {
     background-color: #212121;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 10;
     display: block;
