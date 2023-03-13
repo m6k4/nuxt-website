@@ -71,6 +71,7 @@ export default {
 @media only screen and (max-width: 750px) {
   .contact__row {
     padding: 0;
+    margin-bottom: 0
   }
 }
 </style>

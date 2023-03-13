@@ -44,6 +44,12 @@ export default {
   background-color: #F0F0F0;
   z-index: 1;
 }
+
+@media only screen and (max-width: 750px) {
+  .TheFooter {
+    display: none;
+  }
+}
 </style>
 <style lang="css">
 .Portfolio__image-grids {
