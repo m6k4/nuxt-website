@@ -209,21 +209,5 @@ export default {
     margin-top: -10vh;
   }
 }
-@media only screen and (max-width: 576px) {
-  .TheContentComponent__wrapper {
-    padding: 0;
-  }
-  .TheContentComponent__title {
-    font-size: 2.5rem;
-    top: -10rem;
-  }
-  .TheContentComponent__image {
-    margin-top: 6%;
-    height: 96%;
-  }
-  .TheContentComponent__content-mobile {
-    font-size: 0.8rem;
-  }
-}
 
 </style>
