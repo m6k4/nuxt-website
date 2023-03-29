@@ -1,6 +1,6 @@
 <template>
   <div class="TheNavbar">
-    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translateY(-10vh)' : ''">
+    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translate3d(0, -10vh, 0)' : ''">
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
@@ -45,7 +45,10 @@
     </div>
     <div
       class="TheNavbar__mobile-content"
-      :style="showMore ? `height: ${setMenuHeightForMobile()}; position: fixed` : 'height: 0'"
+      :style="{
+        transform: `translateY(${showMore ? '0' : '-' + setMenuHeightForMobile()})`,
+        position: 'fixed',
+      }"
     >
       <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
         <NuxtLink to="/portfolio">
@@ -123,7 +126,7 @@ export default {
       }
     },
     setMenuHeightForMobile () {
-      if (window.innerWidth < 1150) {
+      if (typeof window !== 'undefined' && window.innerWidth < 1150) {
         const viewportHeight = window.innerHeight
         const topBarHeight = window.visualViewport.offsetTop
         const menuHeight = viewportHeight - topBarHeight
@@ -268,13 +271,13 @@ export default {
     transition: all .5s ease-in-out;;
   }
   .TheNavbar__menu-burger::before {
-    transform: translateY(-5px)
+    transform: translate3d(0, -5px, 0)
   }
   .TheNavbar__menu-burger::after {
-    transform: translateY(5px)
+    transform: translate3d(0, 5px, 0)
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger {
-    transform: translateX(-20px);
+    transform: translate3d(-20px, 0, 0);
     background: transparent;
     box-shadow: none;
   }
