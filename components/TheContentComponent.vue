@@ -62,6 +62,7 @@ export default {
     this.changeLoadingState()
   },
   mounted () {
+    document.body.style.overflow = 'auto'
     window.addEventListener('scroll', this.handleScroll)
     this.changeLoadingState()
   },
