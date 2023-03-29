@@ -110,5 +110,14 @@ export default {
     right: 1rem;
     bottom: 5rem;
   }
+  .MainPage {
+    margin: 0;
+    position: unset;
+  }
+  .MainPage img {
+    position: absolute;
+    margin-top: -10vh;
+    height: 100%;
+  }
 }
 </style>

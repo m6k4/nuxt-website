@@ -105,9 +105,9 @@ export default {
   color: black;
   position: absolute;
   top: 10%;
-  left: 45%;
+  left: 42%;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 5.5rem;
   line-height: 1rem;
   font-weight: 400;
   transition: all 1.5s ease;
@@ -204,24 +204,22 @@ export default {
   }
   .TheContentComponent__title {
     font-size: 3rem;
-    bottom: 22%;
+    bottom: 10%;
     top: auto;
   }
   .TheContentComponent__content-mobile {
     padding: 0 5%;
-    margin-top: 3rem;
+    margin-top: 0;
   }
   .TheContentComponent__image {
-    height: 85%;
+    height: 95%;
     position: absolute;
     margin-top: -10vh;
   }
 }
-@media only screen and (max-width: 576px) {
-  .TheContentComponent__title {
-    font-size: 2.5rem;
-    /* top: -10rem; */
-    top: 74%;
+/* @media only screen and (max-width: 576px) {
+   .TheContentComponent__title {
+    font-size: 2rem;
   }
   .TheContentComponent__image {
     margin-top: 6%;
@@ -230,6 +228,6 @@ export default {
   .TheContentComponent__content-mobile {
     font-size: 0.8rem;
   }
-}
+} */
 
 </style>

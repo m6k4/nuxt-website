@@ -113,6 +113,10 @@ export default {
     gap: 1rem;
     text-align: left;
   }
+
+  .ContactInfo__description {
+    text-align: center;
+  }
 }
 
 .socials {
