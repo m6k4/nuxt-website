@@ -2,14 +2,10 @@
   <div class="AddressInfo">
     <div class="AddressInfo__address">
       <div class="AddressInfo__address-title">
-        <div class="main-title">
-          Dane firmy:
-        </div>
-        <div class="subtitle">
-          NAVY Architekt Łukasz Kowalski
-        </div>
+          Dane kontaktowe:
       </div>
       <div class="AddressInfo__address-description">
+        <p>NAVY Architekt Łukasz Kowalski</p>
         <p>ul. Konstruktorska 10C/31</p>
         <p>02-673 Warszawa</p>
         <p>NIP 5423106116 REGON 383147338</p>
@@ -35,6 +31,7 @@ export default {
   align-items: center;
   padding: 2rem 0;
   text-transform: none;
+  margin-bottom: 5rem
 }
 
 .AddressInfo__address {
@@ -42,7 +39,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 }
 
 .AddressInfo__address-title {
@@ -51,10 +47,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
-
-.AddressInfo__address-title .main-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -69,6 +62,11 @@ export default {
 .AddressInfo__address-description p {
   font-size: 0.9rem;
   font-weight: 400;
-  margin: 0.5rem 0;
+  margin: 0;
+}
+@media only screen and (max-width: 1150px) {
+  .AddressInfo {
+    margin-bottom: 2rem
+  }
 }
 </style>

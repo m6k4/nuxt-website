@@ -63,7 +63,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0 2rem;
+  padding: 5rem 0 2rem;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -101,8 +101,8 @@ export default {
 
 @media only screen and (max-width: 1150px) {
   .ContactForm__form {
-    width: 80%;
-    padding: 0 10rem;
+    width: 100%;
+    padding: 0 5rem;
   }
 }
 
@@ -119,34 +119,28 @@ export default {
 
 .ContactForm__form-label input,
 .ContactForm__form-label textarea {
-  width: 94%;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
   font-size: 0.9rem;
   outline: none;
   resize: none;
-  overflow: hidden;
   border-width: 0 0 2px;
   outline: 0;
-  border-color: #ccc;
-  background-color: transparent;
+  background-color: #E0E0E0;
 }
 
-.ContactForm__form-label textarea,
-.ContactForm__form-label input {
-  height: 1rem;
+.ContactForm__form-label textarea {
+  height: 10rem;
 }
 
 .ContactForm__form button {
   width: 40%;
   padding: 0.5rem;
   border: 1px solid #2a2a2a;
-  border-radius: 4px;
   font-size: 1rem;
   background-color: #2a2a2a;
   color: #ccc;
   cursor: pointer;
+  margin-top: 0.5rem
 }
 
 .ContactForm__form button:hover {
@@ -185,7 +179,11 @@ export default {
     width: 100%;
   }
 }
-
+@media only screen and (max-width: 750px) {
+  .ContactForm__form {
+    padding: 0;
+  }
+}
 .success-message {
   margin-top: 1rem;
   color: #2a2a2a;

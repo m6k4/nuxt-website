@@ -119,7 +119,7 @@ export default {
 }
 .PorfolioImagesGrid__grid{
   width: 50%;
-  height: 130vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
