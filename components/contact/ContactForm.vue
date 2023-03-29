@@ -123,7 +123,7 @@ export default {
   font-size: 0.9rem;
   outline: none;
   resize: none;
-  border-width: 0 0 2px;
+  border-width: 0;
   outline: 0;
   background-color: #E0E0E0;
 }

@@ -1,6 +1,5 @@
 <template>
   <div class="contact">
-    <ArrowToScroll />
     <TheContentComponent :title="title" :main-image="image">
       <template #custom-content>
         <ContactInfo />
@@ -23,7 +22,6 @@ import ContactForm from '~/components/contact/ContactForm'
 import GoogleMap from '~/components/contact/GoogleMap'
 import ContactInfo from '~/components/contact/ContactInfo'
 import AddressInfo from '~/components/contact/AddressInfo'
-import ArrowToScroll from '~/components/ArrowToScroll'
 
 export default {
   name: 'ContactPage',
@@ -32,8 +30,7 @@ export default {
     ContactForm,
     GoogleMap,
     ContactInfo,
-    AddressInfo,
-    ArrowToScroll
+    AddressInfo
   },
   layout: 'page',
   data () {

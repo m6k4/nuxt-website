@@ -1,6 +1,6 @@
 <template>
   <div class="TheNavbar">
-    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translate3d(0, -10vh, 0)' : ''">
+    <div class="TheNavbar__navbar" :style="isScrollHidden ? 'transform: translateY(-10vh)' : ''">
       <div class="TheNavbar__logo">
         <TheLogo />
       </div>
@@ -268,13 +268,13 @@ export default {
     transition: all .5s ease-in-out;;
   }
   .TheNavbar__menu-burger::before {
-    transform: translate3d(0, -5px, 0)
+    transform: translateY(-5px)
   }
   .TheNavbar__menu-burger::after {
-    transform: translate3d(0, 5px, 0)
+    transform: translateY(5px)
   }
   .TheNavbar__menu.open .TheNavbar__menu-burger {
-    transform: translate3d(-20px, 0, 0);
+    transform: translateX(-20px);
     background: transparent;
     box-shadow: none;
   }

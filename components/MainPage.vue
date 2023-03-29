@@ -6,6 +6,8 @@
       :src="image"
       alt="background image with living room"
       :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+      height="100%"
+      width="100%"
     />
     <div class="MainPage__title" :class="{ 'show': isLoading }">
       <p>przestrzen.</p>

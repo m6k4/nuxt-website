@@ -12,12 +12,14 @@
           :content="linkFirst.subtitle"
         />
         <div class="PorfolioImagesGrid__image-container">
-          <img
-            loading="lazy"
+          <nuxt-img
+            class="PorfolioImagesGrid__image"
+            format="webp"
             :src="linkFirst.image"
             :alt="linkFirst.description"
-            class="PorfolioImagesGrid__image"
-          >
+            :height="!isBiggerImageLeft ? '50%' : '100%'"
+            width="50%"
+          />
         </div>
       </NuxtLink>
       <NuxtLink
@@ -32,12 +34,14 @@
           :content="linkSecond.subtitle"
         />
         <div class="PorfolioImagesGrid__image-container">
-          <img
-            loading="lazy"
+          <nuxt-img
+            class="PorfolioImagesGrid__image"
+            format="webp"
             :src="linkSecond.image"
             :alt="linkSecond.description"
-            class="PorfolioImagesGrid__image"
-          >
+            height="50%"
+            width="50%"
+          />
         </div>
       </NuxtLink>
     </div>
@@ -54,12 +58,14 @@
           :content="linkSecond.subtitle"
         />
         <div class="PorfolioImagesGrid__image-container">
-          <img
-            loading="lazy"
+          <nuxt-img
+            class="PorfolioImagesGrid__image"
+            format="webp"
             :src="linkSecond.image"
             :alt="linkSecond.description"
-            class="PorfolioImagesGrid__image"
-          >
+            height="50%"
+            width="50%"
+          />
         </div>
       </NuxtLink>
       <NuxtLink
@@ -73,12 +79,14 @@
           :content="linkThird.subtitle"
         />
         <div class="PorfolioImagesGrid__image-container">
-          <img
-            loading="lazy"
+          <nuxt-img
+            class="PorfolioImagesGrid__image"
+            format="webp"
             :src="linkThird.image"
             :alt="linkThird.description"
-            class="PorfolioImagesGrid__image"
-          >
+            :height="isBiggerImageLeft ? '50%' : '100%'"
+            width="50%"
+          />
         </div>
       </NuxtLink>
     </div>
@@ -135,11 +143,11 @@ export default {
   cursor: pointer;
 }
 .PorfolioImagesGrid__image img{
-  height: 101%;
+  height: 100%;
   object-fit: cover;
 }
 .PorfolioImagesGrid__image-container {
-  height: 101%;
+  height: 100%;
   object-fit: cover;
   transition: filter 0.3s ease;
 }
@@ -147,26 +155,26 @@ export default {
   filter: brightness(70%);
 }
 .PorfolioImagesGrid__grid-item-1 img {
-  transform: translate3d(-5%, 0, 0);
+  transform: translateX(-5%);
 }
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 img {
-  transform: translate3d(0, 0, 0);
+  transform: translateX(0);
 }
 .PorfolioImagesGrid__grid-item-3 img:hover{
-  transform: translate3d(-5%, 0, 0);
+  transform: translateX(-5%);
 }
 .PorfolioImagesGrid__grid-item-2 img:hover {
-  transform: translate3d(-5%, 0, 0);
+  transform: translateX(-5%);
 }
 .PorfolioImagesGrid__grid-item-1 img:hover {
-  transform: translate3d(0, 0, 0);
+  transform: translateX(0);
 }
 .PorfolioImagesGrid__grid-text {
   left: 0;
   right: 0;
   opacity: 0;
   top: 50%;
-  transform: translate3d(0, -50%, 0);
+  transform: translateY(-50%);
   position: absolute;
   transition: all 0.3s ease-in-out;
   pointer-events: none;

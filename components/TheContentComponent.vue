@@ -5,9 +5,11 @@
         :lazy="true"
         format="webp"
         :src="mainImage"
-        alt="kids room"
+        alt="room"
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+        height="100%"
+        width="50%"
       />
       <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
         {{ title }}
