@@ -51,6 +51,10 @@ export default {
   font-weight: 500;
 }
 
+.AddressInfo__address-title .subtitle {
+  font-size: 0.9rem;
+}
+
 .AddressInfo__address-description {
   margin-top: 1.5rem;
   display: flex;

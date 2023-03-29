@@ -2,7 +2,17 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   image: {
-    // Options
+    provider: 'static',
+    presets: {
+      avif: {
+        format: 'avif',
+        quality: 75
+      },
+      webp: {
+        format: 'webp',
+        quality: 75
+      }
+    }
   },
   server: {
     host: '0.0.0.0',

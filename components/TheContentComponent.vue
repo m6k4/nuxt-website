@@ -1,17 +1,18 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-      <img
-        loading="lazy"
+      <nuxt-img
+        :lazy="true"
+        format="webp"
         :src="mainImage"
         alt="kids room"
         class="TheContentComponent__image"
         :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-      >
-      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}">
+      />
+      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
         {{ title }}
       </h1>
-      <div :class="`TheContentComponent__content ${isScrollable && 'TheContentComponent__content-scroll'}`" :style="isLoading ? 'opacity: 1; right: 10%;' : 'opacity: 0; right: 0;'">
+      <div class="TheContentComponent__content" :class="{ 'show': isLoading }">
         {{ content }}
         <slot name="custom-content" />
       </div>
@@ -68,10 +69,12 @@ export default {
   methods: {
     handleScroll () {
       if (window.innerWidth > 768) {
-        if (this.scrollY > 0) {
-          this.isScrollingOnDesktop = true
-        } else {
-          this.isScrollingOnDesktop = false
+        if (this.isScrollable) {
+          if (window.scrollY > 0) {
+            this.isScrollingOnDesktop = true
+          } else {
+            this.isScrollingOnDesktop = false
+          }
         }
       }
     },
@@ -117,8 +120,17 @@ export default {
   font-size: 0.9rem;
   width: 35%;
   font-weight: 500;
+  right: 10%;
   text-transform: uppercase;
-  transition: all 1.5s ease;
+  transition: all 2s ease;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.TheContentComponent__content.show {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.5s;
 }
 .TheContentComponent__custom-content {
   position: absolute;
@@ -135,12 +147,9 @@ export default {
 
 @media only screen and (max-width: 1600px) {
   .TheContentComponent__content {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     width: 33%;
     bottom: 10%;
-  }
-  .TheContentComponent__image {
-    width: 35rem;
   }
   .TheContentComponent__title {
     font-size: 4.5rem;
@@ -150,9 +159,6 @@ export default {
   }
 }
 @media only screen and (max-width: 1400px) {
-  .TheContentComponent__image {
-    margin-left: 1rem;
-  }
   .TheContentComponent__title {
     font-size: 4rem;
   }
@@ -211,7 +217,16 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   .TheContentComponent__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    /* top: -10rem; */
+    top: 74%;
+  }
+  .TheContentComponent__image {
+    margin-top: 6%;
+    height: 76%;
+  }
+  .TheContentComponent__content-mobile {
+    font-size: 0.8rem;
   }
 }
 
