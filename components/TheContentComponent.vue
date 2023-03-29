@@ -209,5 +209,10 @@ export default {
     margin-top: -10vh;
   }
 }
+@media only screen and (max-width: 576px) {
+  .TheContentComponent__title {
+    font-size: 2rem;
+  }
+}
 
 </style>
