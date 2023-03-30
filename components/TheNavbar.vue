@@ -46,40 +46,47 @@
     <div
       class="TheNavbar__mobile-content"
       :style="{
+        height: setMenuHeightForMobile(),
         transform: `translateY(${showMore ? '0' : '-' + setMenuHeightForMobile()})`,
-        position: 'fixed',
       }"
     >
-      <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
-        <NuxtLink to="/portfolio">
-          <span :class="{ active: activeTab === 'portfolio' }" @click="changeTab('portfolio')">Portfolio</span>
-        </NuxtLink>
-        <NuxtLink to="/navy">
-          <span :class="{ active: activeTab === 'navy' }" @click="changeTab('navy')">Navy</span>
-        </NuxtLink>
-        <NuxtLink to="/offer">
-          <span :class="{ active: activeTab === 'offer' }" @click="changeTab('offer')">Oferta</span>
-        </NuxtLink>
-        <NuxtLink to="/contact">
-          <span :class="{ active: activeTab === 'contact' }" @click="changeTab('contact')">Kontakt</span>
-        </NuxtLink>
-        <div class="TheNavbar__icons">
-          <a href="#" class="facebook">
-            <nuxt-img
-              :lazy="true"
-              format="webp"
-              :src="facebook"
-              alt="facebook icon"
-            />
-          </a>
-          <a href="#" class="instagram">
-            <nuxt-img
-              :lazy="true"
-              format="webp"
-              :src="instagram"
-              alt="instagram icon"
-            />
-          </a>
+      <div
+        class="TheNavbar__mobile-content-container"
+        :style="{
+          position: showMore ? 'fixed' : 'absolute',
+        }"
+      >
+        <div class="TheNavbar__mobile-buttons" :style="!showMore && 'margin-top: -10rem'">
+          <NuxtLink to="/portfolio">
+            <span :class="{ active: activeTab === 'portfolio' }" @click="changeTab('portfolio')">Portfolio</span>
+          </NuxtLink>
+          <NuxtLink to="/navy">
+            <span :class="{ active: activeTab === 'navy' }" @click="changeTab('navy')">Navy</span>
+          </NuxtLink>
+          <NuxtLink to="/offer">
+            <span :class="{ active: activeTab === 'offer' }" @click="changeTab('offer')">Oferta</span>
+          </NuxtLink>
+          <NuxtLink to="/contact">
+            <span :class="{ active: activeTab === 'contact' }" @click="changeTab('contact')">Kontakt</span>
+          </NuxtLink>
+          <div class="TheNavbar__icons">
+            <a href="#" class="facebook">
+              <nuxt-img
+                :lazy="true"
+                format="webp"
+                :src="facebook"
+                alt="facebook icon"
+              />
+            </a>
+            <a href="#" class="instagram">
+              <nuxt-img
+                :lazy="true"
+                format="webp"
+                :src="instagram"
+                alt="instagram icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -224,6 +231,10 @@ export default {
     z-index: 10;
     display: block;
     transition: all 0.3s ease-out;
+  }
+  .TheNavbar__mobile-content-container {
+    width: 100%;
+    height: 100%;
   }
   .TheNavbar__mobile-buttons {
     display: flex;
