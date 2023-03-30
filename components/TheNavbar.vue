@@ -302,7 +302,7 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   .TheNavbar__mobile-buttons a{
-    font-size: 0.9rem
+    font-size: 0.9rem;
   }
 }
 </style>
