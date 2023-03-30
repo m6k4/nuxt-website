@@ -127,7 +127,7 @@ export default {
 }
 .PorfolioImagesGrid__grid{
   width: 50%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -190,7 +190,7 @@ export default {
 }
 @media only screen and (max-width: 1280px) {
   .PorfolioImagesGrid__grid{
-    height: 100vh;
+    height: 80vh;
   }
 }
 @media only screen and (max-width: 1000px) {
