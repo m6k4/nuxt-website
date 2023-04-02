@@ -51,10 +51,9 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-y: hidden;
 }
 .MainPage img {
-  height: 100%;
+  height: 90vh;
   display: block;
   margin: 0 auto;
   transition: all 1s ease-in-out
