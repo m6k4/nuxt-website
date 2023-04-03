@@ -19,6 +19,7 @@
             :alt="linkFirst.description"
             :height="!isBiggerImageLeft ? '50%' : '100%'"
             width="50%"
+            @load="incrementLoadedCount"
           />
         </div>
       </NuxtLink>
@@ -41,6 +42,7 @@
             :alt="linkSecond.description"
             height="50%"
             width="50%"
+            @load="incrementLoadedCount"
           />
         </div>
       </NuxtLink>
@@ -65,6 +67,7 @@
             :alt="linkSecond.description"
             height="50%"
             width="50%"
+            @load="incrementLoadedCount"
           />
         </div>
       </NuxtLink>
@@ -86,6 +89,7 @@
             :alt="linkThird.description"
             :height="isBiggerImageLeft ? '50%' : '100%'"
             width="50%"
+            @load="incrementLoadedCount"
           />
         </div>
       </NuxtLink>
@@ -117,6 +121,23 @@ export default {
       type: Boolean,
       required: true
     }
+  },
+  data () {
+    return {
+      loadedCounter: 0
+    }
+  },
+
+  methods: {
+    incrementLoadedCount () {
+      this.loadedCounter++
+      if (this.loadedCounter === 3) {
+        this.imageLoaded()
+      }
+    },
+    imageLoaded () {
+      this.$emit('images-loaded')
+    }
   }
 }
 </script>
@@ -141,6 +162,7 @@ export default {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .PorfolioImagesGrid__image img{
   height: 100%;
@@ -149,26 +171,51 @@ export default {
 .PorfolioImagesGrid__image-container {
   height: 100%;
   object-fit: cover;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
-.PorfolioImagesGrid__image-container:hover{
+
+.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container,
+.PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container,
+.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container{
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container:hover {
+  transform: translateX(-5%);
+}
+
+.PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container:hover {
+  transform: translateX(-5%);
+}
+
+.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container:hover {
+  transform: translateX(-5%);
+}
+
+/* .PorfolioImagesGrid__image-container:hover{
   filter: brightness(70%);
 }
-.PorfolioImagesGrid__grid-item-1 img {
+
+.PorfolioImagesGrid__grid-item-1, .PorfolioImagesGrid__grid-item-2, .PorfolioImagesGrid__grid-item-3 {
+    transition: all 0.3s ease-in-out;
+}
+
+.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container {
   transform: translateX(-5%);
 }
-.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 img {
+.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container {
   transform: translateX(0);
 }
-.PorfolioImagesGrid__grid-item-3 img:hover{
+.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container:hover{
   transform: translateX(-5%);
 }
-.PorfolioImagesGrid__grid-item-2 img:hover {
+.PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container:hover {
   transform: translateX(-5%);
 }
-.PorfolioImagesGrid__grid-item-1 img:hover {
+.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container:hover {
   transform: translateX(0);
-}
+} */
 .PorfolioImagesGrid__grid-text {
   left: 0;
   right: 0;
