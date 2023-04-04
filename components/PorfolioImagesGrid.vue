@@ -171,7 +171,6 @@ export default {
 .PorfolioImagesGrid__image-container {
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
 .PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container,
@@ -179,18 +178,25 @@ export default {
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container{
   position: relative;
   transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
 }
 
 .PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container:hover {
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
+  /* transform: translateX(-5%); */
+  -webkit-transform: translate3d(-5%, 0, 0);
 }
 
 .PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container:hover {
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
+  /* transform: translateX(-5%); */
+  -webkit-transform: translate3d(-5%, 0, 0);
 }
 
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container:hover {
-  transform: translateX(-5%);
+  transform: translate3d(-5%, 0, 0);
+  /* transform: translateX(-5%); */
+  -webkit-transform: translate3d(-5%, 0, 0);
 }
 
 /* .PorfolioImagesGrid__image-container:hover{
