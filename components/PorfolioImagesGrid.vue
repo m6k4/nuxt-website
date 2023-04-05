@@ -14,7 +14,7 @@
         <div class="PorfolioImagesGrid__image-container">
           <nuxt-img
             class="PorfolioImagesGrid__image"
-            format="webp"
+            format="jpg"
             :src="linkFirst.image"
             :alt="linkFirst.description"
             :height="!isBiggerImageLeft ? '50%' : '100%'"
@@ -37,7 +37,7 @@
         <div class="PorfolioImagesGrid__image-container">
           <nuxt-img
             class="PorfolioImagesGrid__image"
-            format="webp"
+            format="jpg"
             :src="linkSecond.image"
             :alt="linkSecond.description"
             height="50%"
@@ -62,7 +62,7 @@
         <div class="PorfolioImagesGrid__image-container">
           <nuxt-img
             class="PorfolioImagesGrid__image"
-            format="webp"
+            format="jpg"
             :src="linkSecond.image"
             :alt="linkSecond.description"
             height="50%"
@@ -84,7 +84,7 @@
         <div class="PorfolioImagesGrid__image-container">
           <nuxt-img
             class="PorfolioImagesGrid__image"
-            format="webp"
+            format="jpg"
             :src="linkThird.image"
             :alt="linkThird.description"
             :height="isBiggerImageLeft ? '50%' : '100%'"
@@ -164,6 +164,7 @@ export default {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
 .PorfolioImagesGrid__image img{
   height: 100%;
   object-fit: cover;
@@ -198,30 +199,11 @@ export default {
   /* transform: translateX(-5%); */
   -webkit-transform: translate3d(-5%, 0, 0);
 }
-
 /* .PorfolioImagesGrid__image-container:hover{
   filter: brightness(70%);
 }
+*/
 
-.PorfolioImagesGrid__grid-item-1, .PorfolioImagesGrid__grid-item-2, .PorfolioImagesGrid__grid-item-3 {
-    transition: all 0.3s ease-in-out;
-}
-
-.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container {
-  transform: translateX(-5%);
-}
-.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container {
-  transform: translateX(0);
-}
-.PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container:hover{
-  transform: translateX(-5%);
-}
-.PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container:hover {
-  transform: translateX(-5%);
-}
-.PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container:hover {
-  transform: translateX(0);
-} */
 .PorfolioImagesGrid__grid-text {
   left: 0;
   right: 0;

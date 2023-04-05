@@ -2,22 +2,22 @@
   <div class="ThePage">
     <TheNavbar class="TheNavbar" />
     <Nuxt />
-    <!-- <ArrowToScroll v-if="isArrowVisible" /> -->
+    <ArrowToScroll v-if="isArrowVisible" />
     <TheFooter class="TheFooter" />
   </div>
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
-// import ArrowToScroll from '~/components/ArrowToScroll'
+import ArrowToScroll from '~/components/ArrowToScroll'
 import { urlWithScrollingArrow } from '~/utils/constants'
 
 export default {
   name: 'ThePage',
   components: {
     TheNavbar,
-    TheFooter
-    // ArrowToScroll
+    TheFooter,
+    ArrowToScroll
   },
   computed: {
     isArrowVisible () {
@@ -29,7 +29,7 @@ export default {
 <style lang="css" scoped>
 .ThePage {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   background-color: #F0F0F0;
   display: flex;
