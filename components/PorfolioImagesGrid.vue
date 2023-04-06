@@ -21,6 +21,7 @@
             width="50%"
             @load="incrementLoadedCount"
           />
+          <div class="PorfolioImagesGrid__background"></div>
         </div>
       </NuxtLink>
       <NuxtLink
@@ -44,6 +45,7 @@
             width="50%"
             @load="incrementLoadedCount"
           />
+          <div class="PorfolioImagesGrid__background"></div>
         </div>
       </NuxtLink>
     </div>
@@ -69,6 +71,7 @@
             width="50%"
             @load="incrementLoadedCount"
           />
+          <div class="PorfolioImagesGrid__background"></div>
         </div>
       </NuxtLink>
       <NuxtLink
@@ -91,6 +94,7 @@
             width="50%"
             @load="incrementLoadedCount"
           />
+          <div class="PorfolioImagesGrid__background"></div>
         </div>
       </NuxtLink>
     </div>
@@ -172,8 +176,21 @@ export default {
 .PorfolioImagesGrid__image-container {
   height: 100%;
   object-fit: cover;
+  position: relative;
 }
-
+.PorfolioImagesGrid__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.PorfolioImagesGrid__image-container:hover .PorfolioImagesGrid__background{
+  opacity: 1
+}
 .PorfolioImagesGrid__grid-item-1 .PorfolioImagesGrid__image-container,
 .PorfolioImagesGrid__grid-item-2 .PorfolioImagesGrid__image-container,
 .PorfolioImagesGrid__grid-item-3 .PorfolioImagesGrid__image-container{
