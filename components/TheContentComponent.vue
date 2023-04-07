@@ -1,19 +1,21 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-      <nuxt-img
-        :lazy="true"
-        format="webp"
-        :src="mainImage"
-        alt="room"
-        class="TheContentComponent__image"
-        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-        height="100%"
-        width="50%"
-      />
-      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
-        {{ title }}
-      </h1>
+      <div class="TheContentComponent__main">
+        <nuxt-img
+          :lazy="true"
+          format="webp"
+          :src="mainImage"
+          alt="room"
+          class="TheContentComponent__image"
+          :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+          height="100%"
+          width="50%"
+        />
+        <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
+          {{ title }}
+        </h1>
+      </div>
       <div class="TheContentComponent__content" :class="{ 'show': isLoading }">
         {{ content }}
         <slot name="custom-content" />
@@ -197,6 +199,11 @@ export default {
   }
 }
 @media only screen and (max-width: 750px) {
+  .TheContentComponent__main {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+  }
   .TheContentComponent {
     margin-top: 0;
   }
@@ -204,31 +211,27 @@ export default {
     padding: 0;
   }
   .TheContentComponent__title {
-    font-size: 3rem;
-    bottom: 10%;
-    top: auto;
+    font-size: 6vh;
+    position: absolute;
+    bottom: 13.7vh;
+    top: auto
   }
   .TheContentComponent__content-mobile {
     padding: 0 5%;
     margin-top: 0;
   }
   .TheContentComponent__image {
-    height: 95%;
     position: absolute;
+    height: 82vh;
+    top: 0;
     margin-top: -10vh;
   }
 }
-/* @media only screen and (max-width: 576px) {
+@media only screen and (max-width: 440px) {
    .TheContentComponent__title {
-    font-size: 2rem;
+    font-size: 5vh;
+    bottom: 14.2vh;
   }
-  .TheContentComponent__image {
-    margin-top: 6%;
-    height: 76%;
-  }
-  .TheContentComponent__content-mobile {
-    font-size: 0.8rem;
-  }
-} */
+}
 
 </style>
