@@ -1,7 +1,6 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-      <div class="TheContentComponent__main">
         <nuxt-img
           :lazy="true"
           format="webp"
@@ -15,7 +14,6 @@
         <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
           {{ title }}
         </h1>
-      </div>
       <div class="TheContentComponent__content" :class="{ 'show': isLoading }">
         {{ content }}
         <slot name="custom-content" />
@@ -199,11 +197,6 @@ export default {
   }
 }
 @media only screen and (max-width: 750px) {
-  .TheContentComponent__main {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-  }
   .TheContentComponent {
     margin-top: 0;
   }
