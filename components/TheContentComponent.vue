@@ -1,26 +1,28 @@
 <template>
   <div class="TheContentComponent__wrapper">
     <div class="TheContentComponent">
-        <nuxt-img
-          :lazy="true"
-          format="webp"
-          :src="mainImage"
-          alt="room"
-          class="TheContentComponent__image"
-          :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
-          height="100%"
-          width="50%"
-        />
-        <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
-          {{ title }}
-        </h1>
+      <nuxt-img
+        :lazy="true"
+        :format="isJpg ? 'jpg' : 'webp'"
+        :src="mainImage"
+        alt="room"
+        class="TheContentComponent__image"
+        :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+        height="100%"
+        width="50%"
+      />
+      <h1 class="TheContentComponent__title" :class="{move: isScrollingOnDesktop}" :style="isLoading ? 'opacity: 1;' : 'opacity: 0;'">
+        {{ title }}
+      </h1>
       <div class="TheContentComponent__content" :class="{ 'show': isLoading }">
         {{ content }}
         <slot name="custom-content" />
       </div>
     </div>
     <div class="TheContentComponent__content-mobile">
-      {{ content }}
+      <p>
+        {{ content }}
+      </p>
       <slot name="custom-content" />
     </div>
   </div>
@@ -50,6 +52,10 @@ export default {
     isScrollable: {
       type: Boolean,
       default: true
+    },
+    isJpg: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -211,19 +217,19 @@ export default {
   }
   .TheContentComponent__content-mobile {
     padding: 0 5%;
-    margin-top: 0;
+    margin-top: -100px;
   }
   .TheContentComponent__image {
     position: absolute;
-    height: 82vh;
+    height: 75vh;
     top: 0;
     margin-top: -10vh;
   }
 }
 @media only screen and (max-width: 440px) {
    .TheContentComponent__title {
-    font-size: 5vh;
-    bottom: 14.2vh;
+    font-size: 7vh;
+    bottom: 20vh;
   }
 }
 
