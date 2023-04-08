@@ -87,9 +87,11 @@ export default {
 }
 @media only screen and (max-width: 750px) {
   .PortfolioParallax__parallax {
-    height: 90vh;
-    min-height: 90vh;
+    margin-top: -10vh;
     background-attachment: scroll;
+  }
+  .PortfolioParallax {
+    padding: 0;
   }
 }
 

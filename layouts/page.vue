@@ -108,6 +108,9 @@ export default {
     .Portfolio__image-grids {
       padding: 0;
     }
+    .Portfolio__content {
+      padding: 5%
+    }
   }
   @media only screen and (max-width: 576px) {
       .Portfolio__description {
