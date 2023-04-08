@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/ursus/ursus4.webp" title="Ursus">
+  <PortfolioParallax image="/images/portfolio/ursus/ursus4.jpg" title="Ursus">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -9,7 +9,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image2"
             alt="bathroom"
             class="Portfolio__img"
@@ -19,14 +19,14 @@
           <div class="Portfolio__row">
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image1"
               alt="bathroom"
               class="Portfolio__img"
             />
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image3"
               alt="bathroom"
               class="Portfolio__img"
@@ -39,7 +39,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image4"
             alt="bathroom"
             class="Portfolio__img"
@@ -48,7 +48,7 @@
         <div class="Portfolio_image-container" style="padding: 2.5rem 0;">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image5"
             alt="bathroom"
             class="Portfolio__img"
@@ -57,7 +57,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image6"
             alt="bathroom"
             class="Portfolio__img"
@@ -69,7 +69,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image7"
             alt="bathroom"
             class="Portfolio__img"
@@ -79,14 +79,14 @@
           <div class="Portfolio__row">
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image8"
               alt="bathroom"
               class="Portfolio__img"
             />
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image9"
               alt="bathroom"
               class="Portfolio__img"
@@ -108,15 +108,15 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/ursus/ursus5.webp',
-      image2: '/images/portfolio/ursus/ursus6.webp',
-      image3: '/images/portfolio/ursus/ursus3.webp',
-      image4: '/images/portfolio/ursus/ursus4.webp',
-      image5: '/images/portfolio/ursus/ursus1.webp',
-      image6: '/images/portfolio/ursus/ursus10.webp',
-      image7: '/images/portfolio/ursus/ursus7.webp',
-      image8: '/images/portfolio/ursus/ursus8.webp',
-      image9: '/images/portfolio/ursus/ursus9.webp'
+      image1: '/images/portfolio/ursus/ursus5.jpg',
+      image2: '/images/portfolio/ursus/ursus6.jpg',
+      image3: '/images/portfolio/ursus/ursus3.jpg',
+      image4: '/images/portfolio/ursus/ursus4.jpg',
+      image5: '/images/portfolio/ursus/ursus1.jpg',
+      image6: '/images/portfolio/ursus/ursus10.jpg',
+      image7: '/images/portfolio/ursus/ursus7.jpg',
+      image8: '/images/portfolio/ursus/ursus8.jpg',
+      image9: '/images/portfolio/ursus/ursus9.jpg'
     }
   }
 }

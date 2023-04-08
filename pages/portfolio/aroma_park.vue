@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/aroma_park/aroma_park5.webp" title="Aroma Park">
+  <PortfolioParallax image="/images/portfolio/aroma_park/aroma_park5.jpg" title="Aroma Park">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -9,7 +9,7 @@
           <nuxt-img
             :src="image6"
             :lazy="true"
-            format="webp"
+            format="jpg"
             alt="living room"
             class="Portfolio__img"
           />
@@ -18,14 +18,14 @@
           <div class="Portfolio__row">
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image5"
               alt="living room"
               class="Portfolio__img"
             />
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image2"
               alt="living room"
               class="Portfolio__img"
@@ -34,14 +34,14 @@
           <div class="Portfolio__row">
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image3"
               alt="kitchen"
               class="Portfolio__img"
             />
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image4"
               alt="kitchen"
               class="Portfolio__img"
@@ -54,7 +54,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image1"
             alt="bedroom"
             class="Portfolio__img"
@@ -75,12 +75,12 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/aroma_park/aroma_park1.webp',
-      image2: '/images/portfolio/aroma_park/aroma_park2.webp',
-      image3: '/images/portfolio/aroma_park/aroma_park3.webp',
-      image4: '/images/portfolio/aroma_park/aroma_park4.webp',
-      image5: '/images/portfolio/aroma_park/aroma_park5.webp',
-      image6: '/images/portfolio/aroma_park/aroma_park6.webp'
+      image1: '/images/portfolio/aroma_park/aroma_park1.jpg',
+      image2: '/images/portfolio/aroma_park/aroma_park2.jpg',
+      image3: '/images/portfolio/aroma_park/aroma_park3.jpg',
+      image4: '/images/portfolio/aroma_park/aroma_park4.jpg',
+      image5: '/images/portfolio/aroma_park/aroma_park5.jpg',
+      image6: '/images/portfolio/aroma_park/aroma_park6.jpg'
     }
   }
 }
