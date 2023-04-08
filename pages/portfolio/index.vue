@@ -2,7 +2,7 @@
   <div class="Portfolio">
     <OverlayLoading v-if="!pageLoaded" />
 
-    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :is-scrollable="true" />
+    <TheContentComponent :title="title" :content="content" :main-image="kidsRoom" :is-scrollable="true" :is-jpg="true" />
     <div class="Portfolio__image-grids">
       <PorfolioImagesGrid
         :link-first="portfolioLinks.pulpchair"
@@ -52,7 +52,7 @@ export default {
   data () {
     return {
       portfolioLinks,
-      kidsRoom: '/images/portfolio/kids_room.webp',
+      kidsRoom: '/images/portfolio/kids_room.jpg',
       title: 'Portfolio.',
       content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
       loadedCount: 0,

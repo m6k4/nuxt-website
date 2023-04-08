@@ -2,7 +2,7 @@
   <div class="MainPage">
     <nuxt-img
       :lazy="true"
-      format="webp"
+      format="jpeg"
       :src="image"
       alt="background image with living room"
       :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
@@ -24,7 +24,7 @@ export default {
   name: 'MainPage',
   data () {
     return {
-      image: '/images/main.webp',
+      image: '/images/main.jpeg',
       isLoading: false
     }
   },
@@ -40,6 +40,15 @@ export default {
       setTimeout(() => {
         this.isLoading = true
       }, 100)
+    },
+    setMenuHeightForMobile () {
+      if (typeof window !== 'undefined' && window.innerWidth < 1150) {
+        const viewportHeight = window.innerHeight
+        const topBarHeight = window.visualViewport.offsetTop
+        const menuHeight = viewportHeight - topBarHeight
+        return `${menuHeight}px`
+      }
+      return '100vh'
     }
   }
 }
@@ -51,6 +60,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .MainPage img {
   height: 90vh;
