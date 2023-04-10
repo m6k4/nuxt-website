@@ -210,9 +210,9 @@ export default {
     padding: 0;
   }
   .TheContentComponent__title {
-    font-size: 6vh;
+    font-size: 7vh;
     position: absolute;
-    bottom: 13.7vh;
+    bottom: 20.2vh;
     top: auto
   }
   .TheContentComponent__content-mobile {
@@ -227,8 +227,8 @@ export default {
 }
 @media only screen and (max-width: 440px) {
    .TheContentComponent__title {
-    font-size: 7vh;
-    bottom: 20vh;
+    font-size: 6vh;
+    bottom: 20.8vh;
   }
 }
 
