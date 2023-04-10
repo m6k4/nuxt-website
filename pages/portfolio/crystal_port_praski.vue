@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/crystal_port_praski/crystal_port_praski3.webp" title="Crystal Port Praski">
+  <PortfolioParallax image="/images/portfolio/crystal_port_praski/crystal_port_praski3.jpg" title="Crystal Port Praski">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -8,7 +8,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image2"
             alt="bathroom"
             class="Portfolio__img"
@@ -17,7 +17,7 @@
         <div class="Portfolio_image-container" style="padding-top: 2.5rem">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpeg"
             :src="image1"
             alt="bathroom"
             class="Portfolio__img"
@@ -38,8 +38,8 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/crystal_port_praski/crystal_port_praski1.webp',
-      image2: '/images/portfolio/crystal_port_praski/crystal_port_praski2.webp'
+      image1: '/images/main.jpeg',
+      image2: '/images/portfolio/crystal_port_praski/crystal_port_praski2.jpg'
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <PortfolioParallax image="/images/portfolio/klobucka/klobucka1.webp" title="Kłobucka">
+  <PortfolioParallax image="/images/portfolio/klobucka/klobucka1.jpg" title="Kłobucka">
     <template #content>
       <div class="Portfolio__content">
         <div class="Portfolio__description">
@@ -8,7 +8,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image1"
             alt="living room"
             class="Portfolio__img"
@@ -20,7 +20,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image3"
             alt="living room"
             class="Portfolio__img"
@@ -29,7 +29,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image2"
             alt="kitchen"
             class="Portfolio__img"
@@ -41,7 +41,7 @@
         <div class="Portfolio_image-container">
           <nuxt-img
             :lazy="true"
-            format="webp"
+            format="jpg"
             :src="image5"
             alt="bathroom"
             class="Portfolio__img"
@@ -51,14 +51,14 @@
           <div class="Portfolio__row">
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image4"
               alt="bathroom"
               class="Portfolio__img"
             />
             <nuxt-img
               :lazy="true"
-              format="webp"
+              format="jpg"
               :src="image6"
               alt="bathroom"
               class="Portfolio__img"
@@ -80,12 +80,12 @@ export default {
   layout: 'page',
   data () {
     return {
-      image1: '/images/portfolio/klobucka/klobucka1.webp',
-      image2: '/images/portfolio/klobucka/klobucka2.webp',
-      image3: '/images/portfolio/klobucka/klobucka3.webp',
-      image4: '/images/portfolio/klobucka/klobucka4.webp',
-      image5: '/images/portfolio/klobucka/klobucka5.webp',
-      image6: '/images/portfolio/klobucka/klobucka6.webp'
+      image1: '/images/portfolio/klobucka/klobucka1.jpg',
+      image2: '/images/portfolio/klobucka/klobucka2.jpg',
+      image3: '/images/portfolio/klobucka/klobucka3.jpg',
+      image4: '/images/portfolio/klobucka/klobucka4.jpg',
+      image5: '/images/portfolio/klobucka/klobucka5.jpg',
+      image6: '/images/portfolio/klobucka/klobucka6.jpg'
     }
   }
 }
