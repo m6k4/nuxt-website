@@ -1,5 +1,10 @@
 <template>
-  <div class="ThePage">
+  <div
+    class="ThePage"
+    :style="{
+      height: setMenuHeightForMobile()
+    }"
+  >
     <TheNavbar class="TheNavbar" />
     <Nuxt />
     <ArrowToScroll v-if="isArrowVisible" />
@@ -22,6 +27,20 @@ export default {
   computed: {
     isArrowVisible () {
       return urlWithScrollingArrow.includes(this.$route.path)
+    },
+    isMainPage () {
+      return this.$route.path === '/'
+    }
+  },
+  methods: {
+    setMenuHeightForMobile () {
+      if (typeof window !== 'undefined' && window.innerWidth < 1150 && this.isMainPage) {
+        const viewportHeight = window.innerHeight
+        const topBarHeight = window.visualViewport.offsetTop
+        const menuHeight = viewportHeight - topBarHeight
+        return `${menuHeight}px`
+      }
+      return ''
     }
   }
 }
@@ -46,6 +65,9 @@ export default {
 }
 
 @media only screen and (max-width: 750px) {
+  .ThePage {
+    min-height: auto;
+  }
   .TheFooter {
     display: none;
   }

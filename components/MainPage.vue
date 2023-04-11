@@ -1,11 +1,15 @@
 <template>
-  <div class="MainPage">
+  <div
+    class="MainPage"
+  >
     <nuxt-img
       :lazy="true"
       format="jpeg"
       :src="image"
       alt="background image with living room"
-      :style="isLoading ? 'opacity: 1' : 'opacity: 0'"
+      :style="{
+        opacity: isLoading ? '1' : '0'
+      }"
       height="100%"
       width="100%"
     />
@@ -40,15 +44,6 @@ export default {
       setTimeout(() => {
         this.isLoading = true
       }, 100)
-    },
-    setMenuHeightForMobile () {
-      if (typeof window !== 'undefined' && window.innerWidth < 1150) {
-        const viewportHeight = window.innerHeight
-        const topBarHeight = window.visualViewport.offsetTop
-        const menuHeight = viewportHeight - topBarHeight
-        return `${menuHeight}px`
-      }
-      return '90vh'
     }
   }
 }
@@ -117,11 +112,12 @@ export default {
   }
   .MainPage__content {
     right: 1rem;
-    bottom: 5rem;
+    bottom: 10rem;
   }
   .MainPage {
     margin: 0;
     position: unset;
+    height: 100%;
   }
   .MainPage img {
     position: absolute;
