@@ -217,6 +217,7 @@ export default {
   }
   .TheContentComponent__content-mobile {
     padding: 0 5%;
+    margin-top: -60px;
   }
   .TheContentComponent__image {
     position: absolute;
