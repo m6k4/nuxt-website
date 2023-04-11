@@ -48,7 +48,7 @@ export default {
         const menuHeight = viewportHeight - topBarHeight
         return `${menuHeight}px`
       }
-      return '100vh'
+      return '90vh'
     }
   }
 }
