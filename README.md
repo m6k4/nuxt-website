@@ -1,5 +1,5 @@
 # nuxt-website
-DEMO: http://olszewskazuzanna.beep.pl/
+[DEMO](https://navy.zuzannaszpak.pl)
 ## Build Setup
 
 ```bash
